@@ -32,6 +32,10 @@
             <End Role="LiftUsageHistory" EntitySet="LiftUsageHistorySet" />
             <End Role="Ticket" EntitySet="TicketSet" />
           </AssociationSet>
+          <AssociationSet Name="SkiLiftScheduleSkiLift" Association="ERD.SkiLiftScheduleSkiLift">
+            <End Role="SkiLiftSchedule" EntitySet="SkiLiftScheduleSet" />
+            <End Role="SkiLift" EntitySet="SkiLiftSet" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Ticket" Abstract="true">
           <Key>
@@ -80,6 +84,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsOpen" Type="Boolean" Nullable="false" DefaultValue="True" />
         </EntityType>
         <Association Name="LiftTariffSkiLift">
           <End Type="ERD.LiftTariff" Multiplicity="*" Role="LiftTariff" />
@@ -100,12 +105,13 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Lift" Type="String" Nullable="false" />
+          <Property Name="LiftID" Type="Int32" Nullable="false" />
           <Property Name="DayOfTheWeek" Type="Byte" Nullable="false" />
           <Property Name="BeginHour" Type="Time" Nullable="false" />
           <Property Name="EndHour" Type="Time" Nullable="false" />
           <Property Name="BeginDate" Type="DateTime" Nullable="false" />
           <Property Name="EndDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="SkiLift" Relationship="ERD.SkiLiftScheduleSkiLift" FromRole="SkiLiftSchedule" ToRole="SkiLift" />
         </EntityType>
         <EntityType Name="LiftUsageHistory">
           <Key>
@@ -114,8 +120,9 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TicketID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Lift" Relationship="ERD.LiftUsageHistorySkiLift" FromRole="LiftUsageHistory" ToRole="SkiLift" />
-          <Property Name="SkiLiftID" Type="String" Nullable="false" />
+          <Property Name="SkiLiftID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Ticket" Relationship="ERD.LiftUsageHistoryTicket" FromRole="LiftUsageHistory" ToRole="Ticket" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="LiftUsageHistorySkiLift">
           <End Type="ERD.LiftUsageHistory" Role="LiftUsageHistory" Multiplicity="*" />
@@ -142,6 +149,20 @@
             </Principal>
             <Dependent Role="LiftUsageHistory">
               <PropertyRef Name="TicketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SkiLiftScheduleSkiLift">
+          <End Type="ERD.SkiLiftSchedule" Role="SkiLiftSchedule" Multiplicity="*" />
+          <End Type="ERD.SkiLift" Role="SkiLift" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="SkiLift">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SkiLiftSchedule">
+              <PropertyRef Name="LiftID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

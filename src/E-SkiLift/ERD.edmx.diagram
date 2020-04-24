@@ -4,21 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="167161b5b6ef4764934a23fe875f5e19" Name="Main ERD" ZoomLevel="62" >
-        <EntityTypeShape EntityType="ERD.Ticket" Width="1.5" PointX="2.25" PointY="0.5" />
-        <EntityTypeShape EntityType="ERD.User" Width="1.5" PointX="0.875" PointY="5.75" />
-        <EntityTypeShape EntityType="ERD.SkiPass" Width="1.5" PointX="0.5" PointY="3.75" />
+      <Diagram DiagramId="167161b5b6ef4764934a23fe875f5e19" Name="Main ERD" ZoomLevel="53" >
+        <EntityTypeShape EntityType="ERD.Ticket" Width="1.5" PointX="7.375" PointY="0.625" />
+        <EntityTypeShape EntityType="ERD.User" Width="1.5" PointX="11.125" PointY="0.875" />
+        <EntityTypeShape EntityType="ERD.SkiPass" Width="1.5" PointX="7.375" PointY="2.75" />
         <InheritanceConnector EntityType="ERD.SkiPass" />
-        <EntityTypeShape EntityType="ERD.PointTicket" Width="1.5" PointX="2.375" PointY="3.875" />
+        <EntityTypeShape EntityType="ERD.PointTicket" Width="1.5" PointX="9.125" PointY="2.75" />
         <InheritanceConnector EntityType="ERD.PointTicket" />
-        <EntityTypeShape EntityType="ERD.TicketTariff" Width="1.5" PointX="4.875" PointY="3.25" />
-        <EntityTypeShape EntityType="ERD.LiftTariff" Width="1.5" PointX="7.625" PointY="2.75" />
-        <EntityTypeShape EntityType="ERD.SkiLift" Width="1.5" PointX="7.625" PointY="0.625" />
+        <EntityTypeShape EntityType="ERD.TicketTariff" Width="1.5" PointX="13.375" PointY="0.875" />
+        <EntityTypeShape EntityType="ERD.LiftTariff" Width="1.5" PointX="0.5" PointY="2.75" />
+        <EntityTypeShape EntityType="ERD.SkiLift" Width="1.5" PointX="2.625" PointY="0.625" />
         <AssociationConnector Association="ERD.LiftTariffSkiLift" />
-        <EntityTypeShape EntityType="ERD.SkiLiftSchedule" Width="1.5" PointX="10.125" PointY="2.75" />
-        <EntityTypeShape EntityType="ERD.LiftUsageHistory" Width="1.75" PointX="12.625" PointY="2.875" />
+        <EntityTypeShape EntityType="ERD.SkiLiftSchedule" Width="1.5" PointX="2.5" PointY="2.75" />
+        <EntityTypeShape EntityType="ERD.LiftUsageHistory" Width="1.75" PointX="4.5" PointY="2.75" />
         <AssociationConnector Association="ERD.LiftUsageHistorySkiLift" />
         <AssociationConnector Association="ERD.LiftUsageHistoryTicket" />
+        <AssociationConnector Association="ERD.SkiLiftScheduleSkiLift" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
