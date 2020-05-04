@@ -10,19 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace E_SkiLift
+namespace E_SkiLift.Windows
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Red_Window.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Red_Window : Window
     {
-        public MainWindow()
+        public Red_Window()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ((App)Application.Current).Go_green();
         }
     }
 }
