@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:E_SkiLift"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="E-SkiLift" Height="600" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize">
+    <Label Content="Elo świecie!" HorizontalAlignment="Center" Height="40" Margin="0" VerticalAlignment="Center" Width="400" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
 </Window>
