@@ -80,12 +80,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Class1.cs" />
-    <Compile Include="Windows\Green_Window.xaml.cs">
-      <DependentUpon>Green_Window.xaml</DependentUpon>
+    <Compile Include="Models\ExampleModel.cs" />
+    <Compile Include="Windows\AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Red_Window.xaml.cs">
-      <DependentUpon>Red_Window.xaml</DependentUpon>
+    <Compile Include="Windows\CashierPage.xaml.cs">
+      <DependentUpon>CashierPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GatePage.xaml.cs">
+      <DependentUpon>GatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OwnerPage.xaml.cs">
+      <DependentUpon>OwnerPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -126,16 +138,34 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Page Include="Windows\Green_Window.xaml">
+    <Page Include="Windows\AdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\Red_Window.xaml">
+    <Page Include="Windows\CashierPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\GatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OwnerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\background.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

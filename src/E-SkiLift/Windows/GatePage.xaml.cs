@@ -10,23 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace E_SkiLift.Windows
 {
     /// <summary>
-    /// Interaction logic for Red_Window.xaml
+    /// Interaction logic for GatePage.xaml
     /// </summary>
-    public partial class Red_Window : Window
+    public partial class GatePage : Page
     {
-        public Red_Window()
+        private readonly MainWindow parentWindow;
+
+        public GatePage(MainWindow parentWindow)
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ((App)Application.Current).Go_green();
+            this.parentWindow = parentWindow;
         }
     }
 }

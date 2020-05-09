@@ -10,18 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace E_SkiLift.Windows
 {
     /// <summary>
-    /// Interaction logic for Green_Window.xaml
+    /// Interaction logic for CashierPage.xaml
     /// </summary>
-    public partial class Green_Window : Window
+    public partial class CashierPage : Page
     {
-        public Green_Window()
+        private readonly MainWindow parentWindow;
+
+        public CashierPage(MainWindow parentWindow)
         {
             InitializeComponent();
+            this.parentWindow = parentWindow;
         }
     }
 }
