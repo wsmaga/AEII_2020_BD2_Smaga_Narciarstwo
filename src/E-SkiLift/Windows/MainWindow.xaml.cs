@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_SkiLift.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,9 @@ namespace E_SkiLift.Windows
         public CashierPage cashierPage;
         public OwnerPage ownerPage;
         public GatePage gatePage;
+        public SkierSummaryPage skierSummaryPage;
+
+        public ExampleModel exampleModel;
         
         public MainWindow()
         {
@@ -34,12 +38,14 @@ namespace E_SkiLift.Windows
             cashierPage = new CashierPage(this);
             ownerPage = new OwnerPage(this);
             gatePage = new GatePage(this);
+            skierSummaryPage = new SkierSummaryPage(this);
 
             ShowLoginPage();
         }
 
         public void ShowLoginPage()
         {
+            loginPage.ClearBeforeShow();
             currentPage.Content = loginPage;
         }
 
@@ -61,6 +67,13 @@ namespace E_SkiLift.Windows
         public void ShowGatePage()
         {
             currentPage.Content = gatePage;
+        }
+
+        public void ShowSkierSummaryPage(int ticketID)
+        {
+            exampleModel = new ExampleModel(ticketID);
+            skierSummaryPage.DataContext = exampleModel; //Model becomes a data context for a page - it's data can now be binded to the view controls.
+            currentPage.Content = skierSummaryPage;
         }
     }
 }

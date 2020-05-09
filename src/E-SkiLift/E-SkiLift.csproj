@@ -99,6 +99,9 @@
     <Compile Include="Windows\OwnerPage.xaml.cs">
       <DependentUpon>OwnerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\SkierSummaryPage.xaml.cs">
+      <DependentUpon>SkierSummaryPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\OwnerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SkierSummaryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

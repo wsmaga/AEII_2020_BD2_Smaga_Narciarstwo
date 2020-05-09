@@ -5,10 +5,35 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:E_SkiLift.Windows"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="GatePage">
 
-    <Grid>
-        
-    </Grid>
+    <Canvas Width="800" Height="600">
+        <WrapPanel Background="#3FFFFFFF" Canvas.Left="20" Canvas.Top="20">
+            <WrapPanel Margin="5">
+                <WrapPanel Orientation="Vertical">
+                    <Label Content="Validate ticket" FontWeight="Bold"/>
+                    <WrapPanel>
+                        <Label Content="Ticket ID: "/>
+                        <TextBox Name="ticketID" MaxLines="1" Width="30"/>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <Label Content="Lift ID: " Width="62"/>
+                        <TextBox Name="liftID" MaxLines="1" Width="30" HorizontalAlignment="Right"/>
+                    </WrapPanel>
+                    <Button Content="VALIDATE" Name="validateButton" Click="validateButton_Click"/>
+                </WrapPanel>
+                <WrapPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="100,0,0,0">
+                    <Label Content="Print skier summary" HorizontalAlignment="Right" FontWeight="Bold"/>
+                    <WrapPanel>
+                        <Label Content="Ticket ID: "/>
+                        <TextBox Name="ticketIDSummary" MaxLines="1" Width="30"/>
+                    </WrapPanel>
+                    <Button Content="PRINT SUMMARY" Name="printButton" Click="printButton_Click" VerticalAlignment="Bottom" Margin="0,25,0,0"/>
+                </WrapPanel>
+            </WrapPanel>
+        </WrapPanel>
+
+        <Button Name="logoutButton" Content="LOGOUT" Click="logoutButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20,520,0,0"/>
+    </Canvas>
 </Page>

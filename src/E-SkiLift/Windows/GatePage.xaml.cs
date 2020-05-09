@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,6 +27,29 @@ namespace E_SkiLift.Windows
         {
             InitializeComponent();
             this.parentWindow = parentWindow;
+        }
+
+        private void validateButton_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO Implement actual functionality.
+            MessageBox.Show("Ticket validated.\nNOT YET IMPLEMENTED");
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO Implement actual logout.
+            parentWindow.ShowLoginPage();
+        }
+
+        private void printButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                parentWindow.ShowSkierSummaryPage(int.Parse(ticketIDSummary.Text));
+            } catch(FormatException ex)
+            {
+                MessageBox.Show("Invalid ticket ID!");
+            }
         }
     }
 }

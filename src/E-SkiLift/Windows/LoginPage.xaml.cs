@@ -61,5 +61,15 @@ namespace E_SkiLift.Windows
         {
             parentWindow.ShowGatePage();
         }
+
+        /// <summary>
+        /// Resets labels and text boxes so that they don't show strings from previous usage.
+        /// </summary>
+        public void ClearBeforeShow()
+        {
+            errorTextField.Content = "";
+            login.Clear();
+            password.Clear();
+        }
     }
 }
