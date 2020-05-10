@@ -16,35 +16,27 @@ using System.Windows.Shapes;
 namespace E_SkiLift.Windows
 {
     /// <summary>
-    /// Interaction logic for OwnerPage.xaml
+    /// Interaction logic for CompanySummaryPage.xaml
     /// </summary>
-    public partial class OwnerPage : Page
+    public partial class CompanySummaryPage : Page
     {
         private readonly MainWindow parentWindow;
 
-        public OwnerPage(MainWindow parentWindow)
+        public CompanySummaryPage(MainWindow parentWindow)
         {
             InitializeComponent();
             this.parentWindow = parentWindow;
         }
-
-        private void printCompanySummaryButton_Click(object sender, RoutedEventArgs e)
+        private void returnButton_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.ShowCompanySummaryPage();
+            if (!this.NavigationService.CanGoBack) //this should be possible
+            {
+                MessageBox.Show("NavigationService could not go back in pages history!", "FATAL ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                Environment.Exit(1);
+            }
+
+            this.NavigationService.GoBack();
         }
 
-        private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void logoutButton_Click(object sender, RoutedEventArgs e)
-        {
-            parentWindow.ShowLoginPage();
-        }
-
-        private void tariffButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

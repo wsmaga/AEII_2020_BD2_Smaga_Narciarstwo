@@ -7,8 +7,22 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OwnerPage">
+    <Canvas Width="800" Height="600">
+        <WrapPanel Background="#3FFFFFFF" Canvas.Left="20" Canvas.Top="20">
+            <WrapPanel Margin="5">
+                <WrapPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <Label Content="OWNER PANEL" FontWeight="Bold" Width="400" HorizontalContentAlignment="Center"/>
+                    <Label Content="Action:" FontWeight="Bold"/>
+                    <WrapPanel>
+                        <Button Content=" MODIFY LIFT SCHEDULE " Name="liftScheduleButton" Click="liftScheduleButton_Click"/>
+                        <Button Content=" MODIFY TARIFF " Name="tariffButton" Click="tariffButton_Click"/>
+                        <Button Content=" PRINT COMPANY SUMMARY" Name="printCompanySummaryButton" Click="printCompanySummaryButton_Click"/>
+                    </WrapPanel>
+                </WrapPanel>
 
-    <Grid>
-        
-    </Grid>
+            </WrapPanel>
+        </WrapPanel>
+
+        <Button Name="logoutButton" Content="LOGOUT" Click="logoutButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20,520,0,0"/>
+    </Canvas>
 </Page>

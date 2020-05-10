@@ -62,6 +62,14 @@ namespace E_SkiLift.Windows
             parentWindow.ShowGatePage();
         }
 
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                loginButton_Click(sender, e);
+            }
+        }
+
         /// <summary>
         /// Resets labels and text boxes so that they don't show strings from previous usage.
         /// </summary>
