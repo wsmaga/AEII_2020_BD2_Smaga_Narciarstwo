@@ -31,13 +31,11 @@ namespace E_SkiLift.Windows
 
         private void validateButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO Implement actual functionality.
             MessageBox.Show("Ticket validated.\nNOT YET IMPLEMENTED");
         }
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO Implement actual logout.
             parentWindow.ShowLoginPage();
         }
 

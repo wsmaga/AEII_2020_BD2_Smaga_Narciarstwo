@@ -32,7 +32,13 @@ namespace E_SkiLift.Windows
 
         private void returnButton_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.ShowGatePage();            
+            if (!this.NavigationService.CanGoBack) //this should be possible
+            {
+                MessageBox.Show("NavigationService could not go back in pages history!", "FATAL ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                Environment.Exit(1);
+            }
+
+            this.NavigationService.GoBack();
         }
     }
 }
