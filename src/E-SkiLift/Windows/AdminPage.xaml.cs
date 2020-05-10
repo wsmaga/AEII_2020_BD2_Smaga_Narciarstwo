@@ -27,5 +27,40 @@ namespace E_SkiLift.Windows
             InitializeComponent();
             this.parentWindow = parentWindow;
         }
+
+        private void addUserButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void addLiftButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void tariffButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void deleteLiftButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void openCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
