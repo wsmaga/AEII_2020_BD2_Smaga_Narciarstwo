@@ -18,8 +18,8 @@
                         <Label Content="Password: " Height="30"/>
                     </StackPanel>
                     <StackPanel Orientation="Vertical">
-                        <TextBox Name="login" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        <PasswordBox Name="password" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox Name="login" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" KeyDown="OnKeyDownHandler"/>
+                        <PasswordBox Name="password" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" KeyDown="OnKeyDownHandler"/>
                     </StackPanel>
                 </StackPanel>
                 <Button Content="Login" Name="loginButton" Width="100" HorizontalAlignment="Left" Click="loginButton_Click" Margin="0,5,0,0"/>

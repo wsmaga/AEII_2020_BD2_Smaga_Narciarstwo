@@ -87,6 +87,9 @@
     <Compile Include="Windows\CashierPage.xaml.cs">
       <DependentUpon>CashierPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\CompanySummaryPage.xaml.cs">
+      <DependentUpon>CompanySummaryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\GatePage.xaml.cs">
       <DependentUpon>GatePage.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CashierPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CompanySummaryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
