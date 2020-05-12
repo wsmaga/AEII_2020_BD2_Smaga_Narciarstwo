@@ -13,6 +13,8 @@
 - ticket id i dla niego 3 opcje: ticket summary, lock ticket, refund ticket
 
 Obecnie jest to trochę niedomyślne i wygląda jakby obie opcje były potrzebne dla każdego buttona
+--
+Borek
  -->
        
     <Canvas Width="800" Height="600">
