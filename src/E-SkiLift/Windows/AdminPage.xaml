@@ -11,19 +11,21 @@
     <Canvas Width="800" Height="600">
         <WrapPanel Background="#3FFFFFFF" Canvas.Left="20" Canvas.Top="20">
             <WrapPanel Margin="5">
-                <WrapPanel Orientation="Vertical" HorizontalAlignment="Left">
-                    <Label Content="ADMINISTRATOR PANEL" FontWeight="Bold" Width="400" HorizontalContentAlignment="Center"/>
-                    <Label Content="Action:" FontWeight="Bold"/>
-                    <WrapPanel>
-                        <Button Content=" ADD USER " Name="addUserButton" Click="addUserButton_Click"/>
-                        <Button Content=" ADD NEW LIFT " Name="addLiftButton" Click="addLiftButton_Click"/>
-                        <Button Content=" MODIFY LIFT SCHEDULE " Name="liftScheduleButton" Click="liftScheduleButton_Click"/>
-                        <Button Content=" MODIFY TARIFF " Name="tariffButton" Click="tariffButton_Click"/>
-                        <Button Content=" DELETE LIFT " Name="deleteLiftButton" Click="deleteLiftButton_Click"/>
-                        <Button Content=" OPEN/CLOSE LIFT" Name="openCloseButton" Click="openCloseButton_Click"/>
+                <WrapPanel Orientation="Horizontal">
+                    <WrapPanel Orientation="Vertical" HorizontalAlignment="Left">
+                        <Label Content="ADMINISTRATOR PANEL" FontWeight="Bold" HorizontalContentAlignment="Left"/>
+                        <Label Content="Action:" FontWeight="Bold"/>
+                        <WrapPanel Orientation="Vertical">
+                            <Button Content=" ADD USER " Name="addUserButton" Click="addUserButton_Click"/>
+                            <Button Content=" ADD NEW LIFT " Name="addLiftButton" Click="addLiftButton_Click"/>
+                            <Button Content=" DELETE LIFT " Name="deleteLiftButton" Click="deleteLiftButton_Click"/>
+                            <Button Content=" MODIFY LIFT SCHEDULE " Name="liftScheduleButton" Click="liftScheduleButton_Click"/>
+                            <Button Content=" MODIFY TARIFF " Name="tariffButton" Click="tariffButton_Click"/>
+                            <Button Content=" OPEN/CLOSE LIFT" Name="openCloseButton" Click="openCloseButton_Click"/>
+                        </WrapPanel>
                     </WrapPanel>
+                    <ContentControl x:Name="contentControl" Width="600" Height="600"/>
                 </WrapPanel>
-
             </WrapPanel>
         </WrapPanel>
 
