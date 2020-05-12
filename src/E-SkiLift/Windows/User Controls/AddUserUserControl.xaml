@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="E_SkiLift.Windows.AddUserUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:E_SkiLift.Windows"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <StackPanel Orientation="Vertical">
+        <Canvas Height="150">
+            <Label Content="ADD NEW USER" FontWeight="Bold" HorizontalContentAlignment="Center" Width="600"/>
+            <Label Content="Name" Canvas.Top="30" Canvas.Left="10" Width="100"/>
+            <Label Content="Password" Canvas.Top="30" Canvas.Left="150" Width="100"/>
+            <Label Content="User Type" Canvas.Top="30" Canvas.Left="290" Width="100"/>
+            <TextBox Canvas.Left="10" Canvas.Top="60" Width="100"/>
+            <TextBox Canvas.Left="150" Canvas.Top="60" Width="100"/>
+            <TextBox Canvas.Left="290" Canvas.Top="60" Width="100"/>
+            <Button Content=" ADD USER " Name="addUserButton" Click="addUserButton_Click" Canvas.Top="100" Canvas.Left="10"/>
+        </Canvas>
+    </StackPanel>
+</UserControl>
