@@ -8,6 +8,13 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CashierPage">
 
+       <!-- Podzieliłbym to na 2 sekcje:
+- ticket type i pod tym sell ticker
+- ticket id i dla niego 3 opcje: ticket summary, lock ticket, refund ticket
+
+Obecnie jest to trochę niedomyślne i wygląda jakby obie opcje były potrzebne dla każdego buttona
+ -->
+       
     <Canvas Width="800" Height="600">
         <WrapPanel Background="#3FFFFFFF" Canvas.Left="20" Canvas.Top="20">
             <WrapPanel Margin="5">
