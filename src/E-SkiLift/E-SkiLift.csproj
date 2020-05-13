@@ -108,9 +108,6 @@
     <Compile Include="Windows\CashierPage.xaml.cs">
       <DependentUpon>CashierPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\CompanySummaryPage.xaml.cs">
-      <DependentUpon>CompanySummaryPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\GatePage.xaml.cs">
       <DependentUpon>GatePage.xaml</DependentUpon>
     </Compile>
@@ -125,6 +122,9 @@
     </Compile>
     <Compile Include="Windows\SkierSummaryPage.xaml.cs">
       <DependentUpon>SkierSummaryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\User Controls\CompanySummaryUserControl.xaml.cs">
+      <DependentUpon>CompanySummaryUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\User Controls\DeleteLiftUserControl.xaml.cs">
       <DependentUpon>DeleteLiftUserControl.xaml</DependentUpon>
@@ -195,10 +195,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\CompanySummaryPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\GatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -216,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\SkierSummaryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\User Controls\CompanySummaryUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
