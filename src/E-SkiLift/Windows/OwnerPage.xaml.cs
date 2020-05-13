@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_SkiLift.Windows.User_Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,24 +28,26 @@ namespace E_SkiLift.Windows
             InitializeComponent();
             this.parentWindow = parentWindow;
         }
+        private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.contentControl.Content = new ModifyLiftScheduleUserControl();
+        }
+
+        private void tariffButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.contentControl.Content = new ModifyTariffUserControl();
+        }
 
         private void printCompanySummaryButton_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.ShowCompanySummaryPage();
+            this.contentControl.Content = new CompanySummaryUserControl();
         }
 
-        private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
-        {
-        }
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)
         {
             parentWindow.ShowLoginPage();
         }
 
-        private void tariffButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
