@@ -7,41 +7,42 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CashierPage">
-
-       <!-- Podzieliłbym to na 2 sekcje:
-- ticket type i pod tym sell ticker
-- ticket id i dla niego 3 opcje: ticket summary, lock ticket, refund ticket
-
-Obecnie jest to trochę niedomyślne i wygląda jakby obie opcje były potrzebne dla każdego buttona
---
-Borek
- -->
        
     <Canvas Width="800" Height="600">
         <WrapPanel Background="#3FFFFFFF" Canvas.Left="20" Canvas.Top="20">
-            <WrapPanel Margin="5">
-                <WrapPanel Orientation="Vertical" HorizontalAlignment="Left">
-                    <Label Content="CASHIER PANEL" FontWeight="Bold" Width="400" HorizontalContentAlignment="Center"/>
-                    <WrapPanel>
-                        <Label Content="Ticket ID: "/>
-                        <TextBox Name="ticketID" MaxLines="1" Width="30"/>
+            <WrapPanel Margin="5" Orientation="Vertical">
+                <Label Content="CASHIER PANEL" FontWeight="Bold" Width="400" HorizontalContentAlignment="Center"/>
+                <WrapPanel>
+                    <WrapPanel Orientation="Vertical" HorizontalAlignment="Left">
+                        <Label Content="New tickets actions" FontWeight="Bold"/>
+                        
+                        <WrapPanel>
+                            <Label Content="Ticket type: "/>
+                            <ComboBox Width="100" HorizontalAlignment="Left">
+                                <ComboBoxItem IsSelected="True">Point ticket</ComboBoxItem>
+                                <ComboBoxItem>Ski Pass</ComboBoxItem>
+                            </ComboBox>
+                        </WrapPanel>
+                        <Button Content=" SELL NEW TICKET " Name="sellButton" Click="sellButton_Click" MaxWidth="100" HorizontalAlignment="Left"/>
                     </WrapPanel>
                     <WrapPanel>
-                        <Label Content="Ticket type: "/>
-                        <ComboBox Width="100" HorizontalAlignment="Left">
-                            <ComboBoxItem IsSelected="True">Point ticket</ComboBoxItem>
-                            <ComboBoxItem>Ski Pass</ComboBoxItem>
-                        </ComboBox>
+                        <!-- Temporary(xD) haxx to widen the gap between New tickets actions and Existing tickets actions.
+                        Should've used Grid instead of Canvas. -->
+                        <Label Content="          "/>
                     </WrapPanel>
-                    
-
-                    <Label Content="Action:" FontWeight="Bold"/>
-                    <WrapPanel>
-                        <Button Content=" SELL NEW TICKET " Name="sellButton" Click="sellButton_Click"/>
+                    <WrapPanel Orientation="Vertical">
+                        <Label Content="Existing tickets actions" FontWeight="Bold"/>
+                        <WrapPanel>
+                            <Label Content="Ticket ID: "/>
+                            <TextBox Name="ticketID" MaxLines="1" Width="30"/>
+                        </WrapPanel>
                         <Button Content=" DISPLAY TICKET SUMMARY " Name="summaryButton" Click="summaryButton_Click"/>
                         <Button Content=" LOCK TICKET " Name="lockButton" Click="lockButton_Click"/>
                         <Button Content=" REFUND TICKET " Name="refundButton" Click="refundButton_Click"/>
                     </WrapPanel>
+                </WrapPanel>
+                <WrapPanel>
+                    
                 </WrapPanel>
                 
             </WrapPanel>
