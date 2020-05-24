@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_SkiLift.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,12 @@ namespace E_SkiLift.Windows
 
         private void addUserButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("NOT YET IMPLEMENTED\nAdded new user.");
+            Admin.AddUser((UserType) int.Parse(AddUserType.Text), AddUserName.Text, AddUserLogin.Text, AddUserPassword.Text);
+            MessageBox.Show("Added new user.");
+            AddUserName.Text = "";
+            AddUserLogin.Text = "";
+            AddUserPassword.Text = "";
+            AddUserType.Text = "";
         }
     }
 }

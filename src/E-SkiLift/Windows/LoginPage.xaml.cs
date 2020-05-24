@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_SkiLift.Models;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -32,9 +33,26 @@ namespace E_SkiLift.Windows
         //Login button click handler.
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-                //Mockup system authorization.
-                //TODO Make a real authorization with real users from database.
-            if (this.password.Password.Equals("root")) //in the future we can use SecureString while handling passwords
+            //Real authorization with real users from database.
+            User loggedUser = User.SignIn(login.Text, password.Password);
+            if (loggedUser != null)
+            {
+                switch((UserType)loggedUser.UserType)
+                {
+                    case UserType.Admin:
+                        parentWindow.ShowAdminPage();
+                        break;
+                    case UserType.Owner:
+                        parentWindow.ShowOwnerPage();
+                        break;
+                    case UserType.Cashier:
+                        parentWindow.ShowCashierPage();
+                        break;
+                }
+            }
+            else
+                errorTextField.Content = "Wrong password my nigga"; 
+           /* if (this.password.Password.Equals("root")) //in the future we can use SecureString while handling passwords
                 switch (this.login.Text)
                 {
                     case "cashier":
@@ -54,7 +72,7 @@ namespace E_SkiLift.Windows
                         break;
                 }
             else
-                errorTextField.Content = "(MOCKUP MODE)Debug password is \"root\"!";
+                errorTextField.Content = "(MOCKUP MODE)Debug password is \"root\"!";*/
         }
 
         private void gateButton_Click(object sender, RoutedEventArgs e)

@@ -10,12 +10,15 @@
         <Canvas Height="150">
             <Label Content="ADD NEW USER" FontWeight="Bold" HorizontalContentAlignment="Center" Width="600"/>
             <Label Content="Name" Canvas.Top="30" Canvas.Left="10" Width="100"/>
-            <Label Content="Password" Canvas.Top="30" Canvas.Left="150" Width="100"/>
-            <Label Content="User Type" Canvas.Top="30" Canvas.Left="290" Width="100"/>
-            <TextBox Canvas.Left="10" Canvas.Top="60" Width="100"/>
-            <TextBox Canvas.Left="150" Canvas.Top="60" Width="100"/>
-            <TextBox Canvas.Left="290" Canvas.Top="60" Width="100"/>
+            <Label Content="Login" Canvas.Top="30" Canvas.Left="150" Width="100"/>
+            <Label Content="Password" Canvas.Top="30" Canvas.Left="290" Width="100"/>
+            <Label Content="User Type" Canvas.Top="30" Canvas.Left="440" Width="100"/>
+            <TextBox Canvas.Left="10" Canvas.Top="60" Width="100" Name="AddUserName"/>
+            <TextBox Canvas.Left="150" Canvas.Top="60" Width="100" Name="AddUserLogin"/>
+            <TextBox Canvas.Left="290" Canvas.Top="60" Width="100" Name="AddUserPassword"/>
+            <TextBox Canvas.Left="440" Canvas.Top="60" Width="100" Name="AddUserType"/>
             <Button Content=" ADD USER " Name="addUserButton" Click="addUserButton_Click" Canvas.Top="100" Canvas.Left="10"/>
+            
         </Canvas>
     </StackPanel>
 </UserControl>
