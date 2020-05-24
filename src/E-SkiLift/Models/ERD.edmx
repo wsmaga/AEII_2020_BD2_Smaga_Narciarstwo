@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ERD.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ERDStoreContainer">
+    <EntitySet Name="TicketSet" EntityType="ERD.Store.TicketSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet" EntityType="ERD.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TicketTariffSet" EntityType="ERD.Store.TicketTariffSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LiftTariffSet" EntityType="ERD.Store.LiftTariffSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SkiLiftSet" EntityType="ERD.Store.SkiLiftSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SkiLiftScheduleSet" EntityType="ERD.Store.SkiLiftScheduleSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LiftUsageHistorySet" EntityType="ERD.Store.LiftUsageHistorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TicketSet_SkiPass" EntityType="ERD.Store.TicketSet_SkiPass" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TicketSet_PointTicket" EntityType="ERD.Store.TicketSet_PointTicket" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="LiftTariffSkiLift" Association="ERD.Store.LiftTariffSkiLift">
+      <End Role="LiftTariff" EntitySet="LiftTariffSet" />
+      <End Role="SkiLift" EntitySet="SkiLiftSet" />
+    </AssociationSet>
+    <AssociationSet Name="LiftUsageHistorySkiLift" Association="ERD.Store.LiftUsageHistorySkiLift">
+      <End Role="LiftUsageHistory" EntitySet="LiftUsageHistorySet" />
+      <End Role="SkiLift" EntitySet="SkiLiftSet" />
+    </AssociationSet>
+    <AssociationSet Name="LiftUsageHistoryTicket" Association="ERD.Store.LiftUsageHistoryTicket">
+      <End Role="LiftUsageHistory" EntitySet="LiftUsageHistorySet" />
+      <End Role="Ticket" EntitySet="TicketSet" />
+    </AssociationSet>
+    <AssociationSet Name="SkiLiftScheduleSkiLift" Association="ERD.Store.SkiLiftScheduleSkiLift">
+      <End Role="SkiLiftSchedule" EntitySet="SkiLiftScheduleSet" />
+      <End Role="SkiLift" EntitySet="SkiLiftSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SkiPass_inherits_Ticket" Association="ERD.Store.FK_SkiPass_inherits_Ticket">
+      <End Role="Ticket" EntitySet="TicketSet" />
+      <End Role="SkiPass" EntitySet="TicketSet_SkiPass" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PointTicket_inherits_Ticket" Association="ERD.Store.FK_PointTicket_inherits_Ticket">
+      <End Role="Ticket" EntitySet="TicketSet" />
+      <End Role="PointTicket" EntitySet="TicketSet_PointTicket" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TicketSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsValid" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" DefaultValue="" MaxLength="128" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TicketTariffSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BeginDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="PointPrice" Type="float" Nullable="false" />
+    <Property Name="HourPrice" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LiftTariffSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BeginDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="PointCost" Type="int" Nullable="false" />
+    <Property Name="SkiLiftID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SkiLiftSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsOpen" Type="bit" Nullable="false" DefaultValue="true" />
+  </EntityType>
+  <EntityType Name="SkiLiftScheduleSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LiftID" Type="int" Nullable="false" />
+    <Property Name="DayOfTheWeek" Type="tinyint" Nullable="false" />
+    <Property Name="BeginHour" Type="int" Nullable="false" />
+    <Property Name="EndHour" Type="int" Nullable="false" />
+    <Property Name="BeginDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LiftUsageHistorySet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketID" Type="int" Nullable="false" />
+    <Property Name="SkiLiftID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TicketSet_SkiPass">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ExpirationTime" Type="datetime" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TicketSet_PointTicket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Points" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="LiftTariffSkiLift">
+    <End Role="LiftTariff" Type="ERD.Store.LiftTariffSet" Multiplicity="*" />
+    <End Role="SkiLift" Type="ERD.Store.SkiLiftSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="SkiLift">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LiftTariff">
+        <PropertyRef Name="SkiLiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LiftUsageHistorySkiLift">
+    <End Role="LiftUsageHistory" Type="ERD.Store.LiftUsageHistorySet" Multiplicity="*" />
+    <End Role="SkiLift" Type="ERD.Store.SkiLiftSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="SkiLift">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LiftUsageHistory">
+        <PropertyRef Name="SkiLiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LiftUsageHistoryTicket">
+    <End Role="LiftUsageHistory" Type="ERD.Store.LiftUsageHistorySet" Multiplicity="*" />
+    <End Role="Ticket" Type="ERD.Store.TicketSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="Ticket">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LiftUsageHistory">
+        <PropertyRef Name="TicketID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SkiLiftScheduleSkiLift">
+    <End Role="SkiLiftSchedule" Type="ERD.Store.SkiLiftScheduleSet" Multiplicity="*" />
+    <End Role="SkiLift" Type="ERD.Store.SkiLiftSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="SkiLift">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SkiLiftSchedule">
+        <PropertyRef Name="LiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SkiPass_inherits_Ticket">
+    <End Role="Ticket" Type="ERD.Store.TicketSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SkiPass" Type="ERD.Store.TicketSet_SkiPass" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ticket">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SkiPass">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PointTicket_inherits_Ticket">
+    <End Role="Ticket" Type="ERD.Store.TicketSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PointTicket" Type="ERD.Store.TicketSet_PointTicket" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ticket">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PointTicket">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ERD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ERDContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TicketSet" EntityType="ERD.Ticket" />
+          <EntitySet Name="UserSet" EntityType="ERD.User" />
+          <EntitySet Name="TicketTariffSet" EntityType="ERD.TicketTariff" />
+          <EntitySet Name="LiftTariffSet" EntityType="ERD.LiftTariff" />
+          <EntitySet Name="SkiLiftSet" EntityType="ERD.SkiLift" />
+          <AssociationSet Name="LiftTariffSkiLift" Association="ERD.LiftTariffSkiLift">
+            <End EntitySet="LiftTariffSet" Role="LiftTariff" />
+            <End EntitySet="SkiLiftSet" Role="SkiLift" />
+          </AssociationSet>
+          <EntitySet Name="SkiLiftScheduleSet" EntityType="ERD.SkiLiftSchedule" />
+          <EntitySet Name="LiftUsageHistorySet" EntityType="ERD.LiftUsageHistory" />
+          <AssociationSet Name="LiftUsageHistorySkiLift" Association="ERD.LiftUsageHistorySkiLift">
+            <End Role="LiftUsageHistory" EntitySet="LiftUsageHistorySet" />
+            <End Role="SkiLift" EntitySet="SkiLiftSet" />
+          </AssociationSet>
+          <AssociationSet Name="LiftUsageHistoryTicket" Association="ERD.LiftUsageHistoryTicket">
+            <End Role="LiftUsageHistory" EntitySet="LiftUsageHistorySet" />
+            <End Role="Ticket" EntitySet="TicketSet" />
+          </AssociationSet>
+          <AssociationSet Name="SkiLiftScheduleSkiLift" Association="ERD.SkiLiftScheduleSkiLift">
+            <End Role="SkiLiftSchedule" EntitySet="SkiLiftScheduleSet" />
+            <End Role="SkiLift" EntitySet="SkiLiftSet" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Ticket" Abstract="true">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsValid" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User" Abstract="false">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="true" Unicode="true" MaxLength="128" FixedLength="false" DefaultValue="" />
+          <Property Name="UserType" Nullable="false" Type="Int32" />
+          <Property Name="Login" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SkiPass" BaseType="ERD.Ticket" >
+          <Property Name="ExpirationTime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PointTicket" BaseType="ERD.Ticket" >
+          <Property Name="Points" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TicketTariff">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BeginDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" />
+          <Property Name="PointPrice" Type="Double" Nullable="false" />
+          <Property Name="HourPrice" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LiftTariff">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BeginDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" />
+          <Property Name="PointCost" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SkiLift" Relationship="ERD.LiftTariffSkiLift" FromRole="LiftTariff" ToRole="SkiLift" />
+          <Property Name="SkiLiftID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SkiLift">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsOpen" Type="Boolean" Nullable="false" DefaultValue="True" />
+        </EntityType>
+        <Association Name="LiftTariffSkiLift">
+          <End Type="ERD.LiftTariff" Multiplicity="*" Role="LiftTariff" />
+          <End Type="ERD.SkiLift" Multiplicity="1" Role="SkiLift">
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="SkiLift">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LiftTariff">
+              <PropertyRef Name="SkiLiftID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SkiLiftSchedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LiftID" Type="Int32" Nullable="false" />
+          <Property Name="DayOfTheWeek" Type="Byte" Nullable="false" />
+          <Property Name="BeginHour" Type="Int32" Nullable="false" />
+          <Property Name="EndHour" Type="Int32" Nullable="false" />
+          <Property Name="BeginDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="SkiLift" Relationship="ERD.SkiLiftScheduleSkiLift" FromRole="SkiLiftSchedule" ToRole="SkiLift" />
+        </EntityType>
+        <EntityType Name="LiftUsageHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TicketID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lift" Relationship="ERD.LiftUsageHistorySkiLift" FromRole="LiftUsageHistory" ToRole="SkiLift" />
+          <Property Name="SkiLiftID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Ticket" Relationship="ERD.LiftUsageHistoryTicket" FromRole="LiftUsageHistory" ToRole="Ticket" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <Association Name="LiftUsageHistorySkiLift">
+          <End Type="ERD.LiftUsageHistory" Role="LiftUsageHistory" Multiplicity="*" />
+          <End Type="ERD.SkiLift" Role="SkiLift" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="SkiLift">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LiftUsageHistory">
+              <PropertyRef Name="SkiLiftID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LiftUsageHistoryTicket">
+          <End Type="ERD.LiftUsageHistory" Role="LiftUsageHistory" Multiplicity="*" />
+          <End Type="ERD.Ticket" Role="Ticket" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LiftUsageHistory">
+              <PropertyRef Name="TicketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SkiLiftScheduleSkiLift">
+          <End Type="ERD.SkiLiftSchedule" Role="SkiLiftSchedule" Multiplicity="*" />
+          <End Type="ERD.SkiLift" Role="SkiLift" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="SkiLift">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SkiLiftSchedule">
+              <PropertyRef Name="LiftID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERDStoreContainer" CdmEntityContainer="ERDContainer">
+    <EntitySetMapping Name="TicketSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.Ticket)">
+        <MappingFragment StoreEntitySet="TicketSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.SkiPass)">
+        <MappingFragment StoreEntitySet="TicketSet_SkiPass">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ExpirationTime" ColumnName="ExpirationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.PointTicket)">
+        <MappingFragment StoreEntitySet="TicketSet_PointTicket">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TicketTariffSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.TicketTariff)">
+        <MappingFragment StoreEntitySet="TicketTariffSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="PointPrice" ColumnName="PointPrice" />
+          <ScalarProperty Name="HourPrice" ColumnName="HourPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiftTariffSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.LiftTariff)">
+        <MappingFragment StoreEntitySet="LiftTariffSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="PointCost" ColumnName="PointCost" />
+          <ScalarProperty Name="SkiLiftID" ColumnName="SkiLiftID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkiLiftSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.SkiLift)">
+        <MappingFragment StoreEntitySet="SkiLiftSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IsOpen" ColumnName="IsOpen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkiLiftScheduleSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.SkiLiftSchedule)">
+        <MappingFragment StoreEntitySet="SkiLiftScheduleSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LiftID" ColumnName="LiftID" />
+          <ScalarProperty Name="DayOfTheWeek" ColumnName="DayOfTheWeek" />
+          <ScalarProperty Name="BeginHour" ColumnName="BeginHour" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiftUsageHistorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERD.LiftUsageHistory)">
+        <MappingFragment StoreEntitySet="LiftUsageHistorySet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="SkiLiftID" ColumnName="SkiLiftID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
