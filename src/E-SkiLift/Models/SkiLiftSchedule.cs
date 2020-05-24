@@ -17,8 +17,8 @@ namespace E_SkiLift.Models
         public int ID { get; set; }
         public int LiftID { get; set; }
         public byte DayOfTheWeek { get; set; }
-        public int BeginHour { get; set; }
-        public int EndHour { get; set; }
+        public string BeginHour { get; set; }
+        public string EndHour { get; set; }
         public System.DateTime BeginDate { get; set; }
         public System.DateTime EndDate { get; set; }
     

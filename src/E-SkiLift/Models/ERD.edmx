@@ -91,8 +91,8 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="LiftID" Type="int" Nullable="false" />
     <Property Name="DayOfTheWeek" Type="tinyint" Nullable="false" />
-    <Property Name="BeginHour" Type="int" Nullable="false" />
-    <Property Name="EndHour" Type="int" Nullable="false" />
+    <Property Name="BeginHour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EndHour" Type="nvarchar(max)" Nullable="false" />
     <Property Name="BeginDate" Type="datetime" Nullable="false" />
     <Property Name="EndDate" Type="datetime" Nullable="false" />
   </EntityType>
@@ -304,8 +304,8 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LiftID" Type="Int32" Nullable="false" />
           <Property Name="DayOfTheWeek" Type="Byte" Nullable="false" />
-          <Property Name="BeginHour" Type="Int32" Nullable="false" />
-          <Property Name="EndHour" Type="Int32" Nullable="false" />
+          <Property Name="BeginHour" Type="String" Nullable="false" />
+          <Property Name="EndHour" Type="String" Nullable="false" />
           <Property Name="BeginDate" Type="DateTime" Nullable="false" />
           <Property Name="EndDate" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="SkiLift" Relationship="ERD.SkiLiftScheduleSkiLift" FromRole="SkiLiftSchedule" ToRole="SkiLift" />

@@ -10,7 +10,7 @@ namespace E_SkiLift.Persistence
     {
         TEntity Get(int id);
         IEnumerable<TEntity> GetAll();
-        void Add(TEntity entity);
+        TEntity Add(TEntity entity);
         void Remove(TEntity entity);
     }
 }

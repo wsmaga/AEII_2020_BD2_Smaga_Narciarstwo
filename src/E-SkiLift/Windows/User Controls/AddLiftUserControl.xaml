@@ -12,8 +12,10 @@
             <Label Content="ADD LIFT" Width="600" FontWeight="Bold" HorizontalContentAlignment="Center"/>
             <Label Content="Starts with date:" Canvas.Top="40"/>
             <Label Content="Ends with date:" Canvas.Top="40" Canvas.Left="140"/>
-            <DatePicker Name="startDate" Canvas.Top="65"/>
-            <DatePicker Name="endDate" Canvas.Top="65" Canvas.Left="140"/>
+            <DatePicker Name="TariffBeginDate" Canvas.Top="65"/>
+            <DatePicker Name="TariffEndDate" Canvas.Top="65" Canvas.Left="140"/>
+            <TextBox Name="TariffPointCost" Canvas.Top="65" Canvas.Left="276" Width="110"/>
+            <CheckBox Name="LiftStartsOpen"  Canvas.Top="65" Canvas.Left="440" IsChecked="True"/>
             <Label Content="Mon" Canvas.Top="120" Canvas.Left="10"/>
             <Label Content="Tue" Canvas.Top="150" Canvas.Left="10"/>
             <Label Content="Wed" Canvas.Top="180" Canvas.Left="10"/>
@@ -21,23 +23,27 @@
             <Label Content="Fri" Canvas.Top="240" Canvas.Left="10"/>
             <Label Content="Sat" Canvas.Top="270" Canvas.Left="10"/>
             <Label Content="Sun" Canvas.Top="300" Canvas.Left="10"/>
+            <Label Content="Point price per use:" Canvas.Left="276" Canvas.Top="40"/>
+            <Label Content="Starts open:" Canvas.Left="412" Canvas.Top="40"/>
             <Label Content="Opened at:" Canvas.Top="90" Canvas.Left="100" Width="75"/>
-            <wpfTool:TimePicker Canvas.Top="120" Canvas.Left="100" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="150" Canvas.Left="100" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="180" Canvas.Left="100" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="210" Canvas.Left="100" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="240" Canvas.Left="100" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="270" Canvas.Left="100" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="300" Canvas.Left="100" Width="100"/>
+            <wpfTool:TimePicker Name="BeginHourMon" Canvas.Top="120" Canvas.Left="100" Width="100"/>
+            <wpfTool:TimePicker Name="BeginHourTue" Canvas.Top="150" Canvas.Left="100" Width="100"/>
+            <wpfTool:TimePicker Name="BeginHourWed" Canvas.Top="180" Canvas.Left="100" Width="100"/>
+            <wpfTool:TimePicker Name="BeginHourThu" Canvas.Top="210" Canvas.Left="100" Width="100"/>
+            <wpfTool:TimePicker Name="BeginHourFri" Canvas.Top="240" Canvas.Left="100" Width="100"/>
+            <wpfTool:TimePicker Name="BeginHourSat" Canvas.Top="270" Canvas.Left="100" Width="100"/>
+            <wpfTool:TimePicker Name="BeginHourSun" Canvas.Top="300" Canvas.Left="100" Width="100"/>
             <Label Content="Closed at:" Canvas.Top="90" Canvas.Left="300" Width="75"/>
-            <wpfTool:TimePicker Canvas.Top="120" Canvas.Left="300" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="150" Canvas.Left="300" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="180" Canvas.Left="300" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="210" Canvas.Left="300" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="240" Canvas.Left="300" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="270" Canvas.Left="300" Width="100"/>
-            <wpfTool:TimePicker Canvas.Top="300" Canvas.Left="300" Width="100"/>
+            <wpfTool:TimePicker Name="EndHourMon" Canvas.Top="120" Canvas.Left="300" Width="100"/>
+            <wpfTool:TimePicker Name="EndHourTue" Canvas.Top="150" Canvas.Left="300" Width="100"/>
+            <wpfTool:TimePicker Name="EndHourWed" Canvas.Top="180" Canvas.Left="300" Width="100"/>
+            <wpfTool:TimePicker Name="EndHourThu" Canvas.Top="210" Canvas.Left="300" Width="100"/>
+            <wpfTool:TimePicker Name="EndHourFri" Canvas.Top="240" Canvas.Left="300" Width="100"/>
+            <wpfTool:TimePicker Name="EndHourSat" Canvas.Top="270" Canvas.Left="300" Width="100"/>
+            <wpfTool:TimePicker Name="EndHourSun" Canvas.Top="300" Canvas.Left="300" Width="100"/>
             <Button Content=" ADD LIFT " Name="addLiftButton" Click="addLiftButton_Click" Canvas.Top="350" Canvas.Left="10"/>
+
         </Canvas>
+
     </StackPanel>
 </UserControl>

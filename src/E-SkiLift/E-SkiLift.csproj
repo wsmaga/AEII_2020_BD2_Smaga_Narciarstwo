@@ -106,9 +106,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Persistence\Interfaces\ILiftTariffRepository.cs" />
+    <Compile Include="Persistence\Interfaces\ISkiLiftRepository.cs" />
+    <Compile Include="Persistence\Interfaces\ISkiLiftScheduleRepository.cs" />
+    <Compile Include="Persistence\Repositories\LiftTariffRepository.cs" />
     <Compile Include="Persistence\Repositories\Repository.cs" />
     <Compile Include="Persistence\Interfaces\IRepository.cs" />
     <Compile Include="Persistence\Interfaces\IUserRepository.cs" />
+    <Compile Include="Persistence\Repositories\SkiLiftRepository.cs" />
+    <Compile Include="Persistence\Repositories\SkiLiftScheduleRepository.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Persistence\Repositories\UserReposiotry.cs" />
     <Compile Include="Models\Admin.cs" />

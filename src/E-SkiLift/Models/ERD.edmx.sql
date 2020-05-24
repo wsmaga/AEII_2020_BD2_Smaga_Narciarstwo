@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/23/2020 21:21:16
+-- Date Created: 05/24/2020 22:05:56
 -- Generated from EDMX file: C:\Users\Lenovo\source\repos\AEII_2020_BD2_Smaga_Narciarstwo\src\E-SkiLift\Models\ERD.edmx
 -- --------------------------------------------------
 
@@ -121,8 +121,8 @@ CREATE TABLE [dbo].[SkiLiftScheduleSet] (
     [ID] int IDENTITY(1,1) NOT NULL,
     [LiftID] int  NOT NULL,
     [DayOfTheWeek] tinyint  NOT NULL,
-    [BeginHour] int  NOT NULL,
-    [EndHour] int  NOT NULL,
+    [BeginHour] nvarchar(max)  NOT NULL,
+    [EndHour] nvarchar(max)  NOT NULL,
     [BeginDate] datetime  NOT NULL,
     [EndDate] datetime  NOT NULL
 );
