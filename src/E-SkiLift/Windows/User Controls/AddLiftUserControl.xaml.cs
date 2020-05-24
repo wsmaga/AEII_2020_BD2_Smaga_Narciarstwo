@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_SkiLift.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,13 +24,34 @@ namespace E_SkiLift.Windows.User_Controls
         public AddLiftUserControl()
         {
             InitializeComponent();
-            this.startDate.SelectedDate = DateTime.Today;
-            this.endDate.SelectedDate = DateTime.Today.AddDays(28);
+            this.TariffBeginDate.SelectedDate = DateTime.Today;
+            this.TariffEndDate.SelectedDate = DateTime.Today.AddDays(28);
         }
 
         private void addLiftButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("NOT YET IMPLEMENTED\nAdded new lift.");
+            string[] SchBeginHours = new string[]{
+                BeginHourMon.Text,
+                BeginHourTue.Text,
+                BeginHourWed.Text,
+                BeginHourThu.Text,
+                BeginHourFri.Text,
+                BeginHourSat.Text,
+                BeginHourSun.Text };
+            string[] SchEndHours = new string[]{
+                EndHourMon.Text,
+                EndHourTue.Text,
+                EndHourWed.Text,
+                EndHourThu.Text,
+                EndHourFri.Text,
+                EndHourSat.Text,
+                EndHourSun.Text };
+            System.DateTime TarBeginDate = TariffBeginDate.SelectedDate ?? DateTime.Today;
+            System.DateTime TarEndDate = TariffEndDate.SelectedDate ?? DateTime.Today;
+            int TarPointCost = int.Parse(TariffPointCost.Text);
+            Admin.AddSkiLift(TarBeginDate,TarEndDate,TarPointCost,SchBeginHours,SchEndHours,LiftStartsOpen.IsChecked??true);
+
+
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_SkiLift.Persistence.Interfaces;
+using E_SkiLift.Persistence.Repositories;
 
 namespace E_SkiLift.Repository
 {
@@ -16,8 +18,14 @@ namespace E_SkiLift.Repository
         {
             context = _context;
             Users = new UserRepository(context);
+            SkiLifts = new SkiLiftRepository(context);
+            LiftTariffs = new LiftTariffRepository(context);
+            SkiLiftSchedules = new SkiLiftScheduleRepository(context); 
         }
         public IUserRepository Users { get; private set; }
+        public ISkiLiftRepository SkiLifts { get; private set; }
+        public ILiftTariffRepository LiftTariffs { get; private set; }
+        public ISkiLiftScheduleRepository SkiLiftSchedules { get; private set; }
         public int Complete()
         {
             return context.SaveChanges();

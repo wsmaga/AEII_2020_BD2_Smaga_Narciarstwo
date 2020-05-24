@@ -20,9 +20,9 @@ namespace E_SkiLift.Persistence
         {
             return dbContext.Set<TEntity>().Find(id);
         }
-        public void Add(TEntity entity)
+        public TEntity Add(TEntity entity)
         {
-            dbContext.Set<TEntity>().Add(entity);
+            return dbContext.Set<TEntity>().Add(entity);
         }
         public IEnumerable<TEntity> GetAll()
         {
