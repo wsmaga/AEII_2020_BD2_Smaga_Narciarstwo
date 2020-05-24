@@ -1,5 +1,5 @@
 ﻿
-using E_SkiLift.DAO;
+using E_SkiLift.Persistence;
 using E_SkiLift.Models;
 using System;
 using System.Collections.Generic;

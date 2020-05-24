@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_SkiLift.DAO
+namespace E_SkiLift.Persistence
 {
     class UserRepository: Repository<User>, IUserRepository
     {

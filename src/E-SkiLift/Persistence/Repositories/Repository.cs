@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_SkiLift.DAO
+namespace E_SkiLift.Persistence
 {
     class Repository<TEntity>: IRepository<TEntity> where TEntity: class
     {
