@@ -11,7 +11,7 @@
         <Canvas>
             <Label Content="DELETE LIFT" Width="600" FontWeight="Bold" HorizontalContentAlignment="Center"/>
             <Label Content="Lift ID" Canvas.Top="40" Canvas.Left="10"/>
-            <wpfTool:IntegerUpDown Canvas.Top="40" Canvas.Left="100" Width="50"/>
+            <wpfTool:IntegerUpDown Canvas.Top="40" Canvas.Left="100" Width="50" Minimum="1" Name="LiftIdComp"/>
             <Button Content=" DELETE LIFT " Name="deleteLiftButton" Click="deleteLiftButton_Click" Canvas.Top="80" Canvas.Left="10"/>
         </Canvas>
     </StackPanel>

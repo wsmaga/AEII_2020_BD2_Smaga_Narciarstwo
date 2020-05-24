@@ -14,7 +14,7 @@
             <Label Content="Ends with date:" Canvas.Top="40" Canvas.Left="140"/>
             <DatePicker Name="TariffBeginDate" Canvas.Top="65"/>
             <DatePicker Name="TariffEndDate" Canvas.Top="65" Canvas.Left="140"/>
-            <TextBox Name="TariffPointCost" Canvas.Top="65" Canvas.Left="276" Width="110"/>
+            <wpfTool:IntegerUpDown Name="TariffPointCost" Canvas.Top="65" Canvas.Left="276" Width="110" Minimum="1"/>
             <CheckBox Name="LiftStartsOpen"  Canvas.Top="65" Canvas.Left="440" IsChecked="True"/>
             <Label Content="Mon" Canvas.Top="120" Canvas.Left="10"/>
             <Label Content="Tue" Canvas.Top="150" Canvas.Left="10"/>

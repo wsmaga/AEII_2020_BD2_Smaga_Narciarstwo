@@ -22,7 +22,10 @@ namespace E_SkiLift.Persistence
         }
         public TEntity Add(TEntity entity)
         {
-            return dbContext.Set<TEntity>().Add(entity);
+            if (entity != null)
+                return dbContext.Set<TEntity>().Add(entity);
+            else
+                return null;
         }
         public IEnumerable<TEntity> GetAll()
         {
@@ -30,7 +33,8 @@ namespace E_SkiLift.Persistence
         }
         public void Remove(TEntity entity)
         {
-            dbContext.Set<TEntity>().Remove(entity);
+            if(entity!=null)
+                dbContext.Set<TEntity>().Remove(entity);
         }
     }
 }
