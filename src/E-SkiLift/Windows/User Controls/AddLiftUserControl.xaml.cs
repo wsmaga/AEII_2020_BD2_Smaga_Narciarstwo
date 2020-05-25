@@ -26,6 +26,7 @@ namespace E_SkiLift.Windows.User_Controls
             InitializeComponent();
             this.TariffBeginDate.SelectedDate = DateTime.Today;
             this.TariffEndDate.SelectedDate = DateTime.Today.AddDays(28);
+            this.TariffPointCost.Value = 100;
         }
 
         private void addLiftButton_Click(object sender, RoutedEventArgs e)
@@ -48,8 +49,11 @@ namespace E_SkiLift.Windows.User_Controls
                 EndHourSun.Text };
             System.DateTime TarBeginDate = TariffBeginDate.SelectedDate ?? DateTime.Today;
             System.DateTime TarEndDate = TariffEndDate.SelectedDate ?? DateTime.Today;
-            int TarPointCost = int.Parse(TariffPointCost.Text);
-            Admin.AddSkiLift(TarBeginDate,TarEndDate,TarPointCost,SchBeginHours,SchEndHours,LiftStartsOpen.IsChecked??true);
+            int TarPointCost = TariffPointCost.Value ?? 1;
+            if(Admin.AddSkiLift(TarBeginDate,TarEndDate,TarPointCost,SchBeginHours,SchEndHours,LiftStartsOpen.IsChecked??true))
+                MessageBox.Show("Added new lift.");
+            else
+                MessageBox.Show("Could not add new lift.");
 
 
         }

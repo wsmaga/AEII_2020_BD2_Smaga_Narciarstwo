@@ -34,6 +34,10 @@ namespace E_SkiLift.Windows
         {
             this.contentControl.Content = new AddUserUserControl();
         }
+        private void deleteUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.contentControl.Content = new DeleteUserUserControl();
+        }
 
         private void addLiftButton_Click(object sender, RoutedEventArgs e)
         {

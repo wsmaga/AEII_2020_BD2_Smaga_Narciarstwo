@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_SkiLift.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,14 @@ namespace E_SkiLift.Windows.User_Controls
 
         private void deleteLiftButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("NOT YET IMPLEMENTED\nLift deleted.");
+            Nullable<int> liftId = LiftIdComp.Value;
+            bool result = false;
+            if (liftId.HasValue)
+                result = Admin.RemoveSkiLift(liftId.Value);
+            if (result)
+                MessageBox.Show("Successfuly deleted lift.");
+            else
+                MessageBox.Show("Could not delete lift with " + liftId??"null" + " id");
         }
     }
 }

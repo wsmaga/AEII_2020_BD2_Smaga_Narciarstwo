@@ -202,6 +202,9 @@
     <Compile Include="Windows\User Controls\DeleteLiftUserControl.xaml.cs">
       <DependentUpon>DeleteLiftUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\User Controls\DeleteUserUserControl.xaml.cs">
+      <DependentUpon>DeleteUserUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\User Controls\ModifyLiftScheduleUserControl.xaml.cs">
       <DependentUpon>ModifyLiftScheduleUserControl.xaml</DependentUpon>
     </Compile>
@@ -300,6 +303,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\User Controls\DeleteLiftUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\User Controls\DeleteUserUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

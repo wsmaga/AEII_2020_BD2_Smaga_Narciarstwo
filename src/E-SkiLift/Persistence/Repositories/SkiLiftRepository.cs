@@ -14,11 +14,16 @@ namespace E_SkiLift.Persistence.Repositories
 
         public void OpenLift(int id)
         {
-            ERDContainer.Set<SkiLift>().Find(id).IsOpen = true;
+            SkiLift lift = ERDContainer.Set<SkiLift>().Find(id);
+            if (lift != null)
+                lift.IsOpen = true;
+            
         }
         public void CloseLift(int id)
         {
-            ERDContainer.Set<SkiLift>().Find(id).IsOpen=false;
+            SkiLift lift = ERDContainer.Set<SkiLift>().Find(id);
+            if (lift != null)
+                lift.IsOpen = false;
         }
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
     }

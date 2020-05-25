@@ -17,6 +17,7 @@
                         <Label Content="Action:" FontWeight="Bold"/>
                         <WrapPanel Orientation="Vertical">
                             <Button Content=" ADD USER " Name="addUserButton" Click="addUserButton_Click"/>
+                            <Button Content=" DELETE USER " Name="deleteUserButton" Click="deleteUserButton_Click"/>
                             <Button Content=" ADD NEW LIFT " Name="addLiftButton" Click="addLiftButton_Click"/>
                             <Button Content=" DELETE LIFT " Name="deleteLiftButton" Click="deleteLiftButton_Click"/>
                             <Button Content=" MODIFY LIFT SCHEDULE " Name="liftScheduleButton" Click="liftScheduleButton_Click"/>
