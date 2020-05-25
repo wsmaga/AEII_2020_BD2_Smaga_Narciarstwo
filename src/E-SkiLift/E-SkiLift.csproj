@@ -107,7 +107,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Cashier.cs" />
-    <Compile Include="Models\Interfaces\IModifiesTariff.cs" />
+    <Compile Include="Models\Interfaces\IModifiesLiftData.cs" />
+    <Compile Include="Models\Interfaces\ModifiesLiftData.cs" />
+    <Compile Include="Models\ScheduleContainer.cs" />
     <Compile Include="Persistence\Interfaces\ILiftTariffRepository.cs" />
     <Compile Include="Persistence\Interfaces\IPointTicketRepository.cs" />
     <Compile Include="Persistence\Interfaces\ISkiLiftRepository.cs" />

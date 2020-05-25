@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_SkiLift.Persistence
 {
-    interface IUserRepository: IRepository<User>
+    public interface IUserRepository: IRepository<User>
     {
         User GetUserByCredentials(string login, string password);
     }

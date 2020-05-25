@@ -30,7 +30,8 @@ namespace E_SkiLift.Windows
         }
         private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new ModifyLiftScheduleUserControl();
+            //Temporarly changed to null change to owner when you implement owner page
+            this.contentControl.Content = new ModifyLiftScheduleUserControl(null);
         }
 
         private void tariffButton_Click(object sender, RoutedEventArgs e)
