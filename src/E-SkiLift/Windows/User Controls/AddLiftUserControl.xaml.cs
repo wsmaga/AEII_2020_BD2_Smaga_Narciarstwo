@@ -21,12 +21,31 @@ namespace E_SkiLift.Windows.User_Controls
     /// </summary>
     public partial class AddLiftUserControl : UserControl
     {
-        public AddLiftUserControl()
+        private readonly Admin LoggedAdmin;
+        public AddLiftUserControl(Admin _loggedAdmin)
         {
             InitializeComponent();
             this.TariffBeginDate.SelectedDate = DateTime.Today;
-            this.TariffEndDate.SelectedDate = DateTime.Today.AddDays(28);
+            //this.TariffEndDate.SelectedDate = DateTime.Today.AddDays(28);
             this.TariffPointCost.Value = 100;
+            LoggedAdmin = _loggedAdmin;
+
+            BeginHourMon.Text = "10:00";
+            BeginHourTue.Text = "10:00";
+            BeginHourWed.Text = "10:00";
+            BeginHourThu.Text = "10:00";
+            BeginHourFri.Text = "10:00";
+            BeginHourSat.Text = "10:00";
+            BeginHourSun.Text = "10:00";
+
+            EndHourMon.Text = "19:00";
+            EndHourTue.Text = "19:00";
+            EndHourWed.Text = "19:00";
+            EndHourThu.Text = "19:00";
+            EndHourFri.Text = "19:00";
+            EndHourSat.Text = "19:00";
+            EndHourSun.Text = "19:00";
+
         }
 
         private void addLiftButton_Click(object sender, RoutedEventArgs e)
@@ -47,10 +66,10 @@ namespace E_SkiLift.Windows.User_Controls
                 EndHourFri.Text,
                 EndHourSat.Text,
                 EndHourSun.Text };
-            System.DateTime TarBeginDate = TariffBeginDate.SelectedDate ?? DateTime.Today;
-            System.DateTime TarEndDate = TariffEndDate.SelectedDate ?? DateTime.Today;
+            System.DateTime TarBeginDate =  DateTime.Today;
+            //System.DateTime TarEndDate = TariffEndDate.SelectedDate ?? DateTime.Today;
             int TarPointCost = TariffPointCost.Value ?? 1;
-            if(Admin.AddSkiLift(TarBeginDate,TarEndDate,TarPointCost,SchBeginHours,SchEndHours,LiftStartsOpen.IsChecked??true))
+            if(LoggedAdmin.AddSkiLift(TarBeginDate,TarPointCost,SchBeginHours,SchEndHours,LiftStartsOpen.IsChecked??true))
                 MessageBox.Show("Added new lift.");
             else
                 MessageBox.Show("Could not add new lift.");

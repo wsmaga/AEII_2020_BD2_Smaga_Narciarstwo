@@ -14,14 +14,19 @@ namespace E_SkiLift.Persistence.Repositories
         
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
 
-        public IEnumerable<SkiLiftSchedule> GetFullLiftSchedule(int liftId)
+        public IEnumerable<SkiLiftSchedule> GetCurrentFullLiftSchedule(int liftId)
         {
-            return ERDContainer.Set<SkiLiftSchedule>().Where(lift => lift.LiftID == liftId);
+            return ERDContainer.Set<SkiLiftSchedule>().Where(sch => sch.LiftID == liftId && sch.EndDate==null).OrderBy(sch => sch.DayOfTheWeek);
         }
 
-        public SkiLiftSchedule GetLiftSchedule(int liftId, byte dayOfWeek)
+        public SkiLiftSchedule GetCurrentDayLiftSchedule(int liftId, byte dayOfWeek)
         {
-            return ERDContainer.Set<SkiLiftSchedule>().Where(lift => lift.LiftID == liftId && lift.DayOfTheWeek==dayOfWeek).FirstOrDefault();
+            return ERDContainer.Set<SkiLiftSchedule>().Where(sch => sch.LiftID == liftId && sch.DayOfTheWeek==dayOfWeek && sch.EndDate==null).FirstOrDefault();
+        }
+
+        public IEnumerable<SkiLiftSchedule> GetFullLiftScheduleHistory(int liftId)
+        {
+            return ERDContainer.Set<SkiLiftSchedule>().Where(sch => sch.LiftID == liftId).OrderBy(sch => sch.DayOfTheWeek).OrderBy(sch=> sch.EndDate);
         }
     }
 }

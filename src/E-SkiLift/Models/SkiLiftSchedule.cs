@@ -20,7 +20,7 @@ namespace E_SkiLift.Models
         public string BeginHour { get; set; }
         public string EndHour { get; set; }
         public System.DateTime BeginDate { get; set; }
-        public System.DateTime EndDate { get; set; }
+        public Nullable<System.DateTime> EndDate { get; set; }
     
         public virtual SkiLift SkiLift { get; set; }
     }

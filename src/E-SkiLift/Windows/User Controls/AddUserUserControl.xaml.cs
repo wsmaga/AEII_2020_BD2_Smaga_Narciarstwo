@@ -21,14 +21,16 @@ namespace E_SkiLift.Windows
     /// </summary>
     public partial class AddUserUserControl : UserControl
     {
-        public AddUserUserControl()
+        private readonly Admin LoggedAdmin;
+        public AddUserUserControl(Admin _loggedAdmin)
         {
             InitializeComponent();
+            LoggedAdmin = _loggedAdmin;
         }
 
         private void addUserButton_Click(object sender, RoutedEventArgs e)
         {
-            Admin.AddUser((UserType) int.Parse(AddUserType.Text), AddUserName.Text, AddUserLogin.Text, AddUserPassword.Text);
+            LoggedAdmin.AddUser((UserType) int.Parse(AddUserType.Text), AddUserName.Text, AddUserLogin.Text, AddUserPassword.Text);
             MessageBox.Show("Added new user.");
             AddUserName.Text = "";
             AddUserLogin.Text = "";

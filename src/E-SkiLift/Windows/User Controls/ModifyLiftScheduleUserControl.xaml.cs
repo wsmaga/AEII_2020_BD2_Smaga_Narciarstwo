@@ -24,12 +24,16 @@ namespace E_SkiLift.Windows.User_Controls
         {
             InitializeComponent();
             this.startDate.SelectedDate = DateTime.Today;
-            this.endDate.SelectedDate = DateTime.Today.AddDays(28);
         }
 
         private void modifyScheduleButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("NOT YET IMPLEMENTED\nSchedule modified.");
+        }
+
+        private void selectLiftSchedule_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

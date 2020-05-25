@@ -9,7 +9,8 @@ namespace E_SkiLift.Persistence.Interfaces
 {
     interface ISkiLiftScheduleRepository: IRepository<SkiLiftSchedule>
     {
-        IEnumerable<SkiLiftSchedule> GetFullLiftSchedule(int liftId);
-        SkiLiftSchedule GetLiftSchedule(int liftId, byte dayOfWeek);
+        IEnumerable<SkiLiftSchedule> GetCurrentFullLiftSchedule(int liftId);
+        SkiLiftSchedule GetCurrentDayLiftSchedule(int liftId, byte dayOfWeek);
+        IEnumerable<SkiLiftSchedule> GetFullLiftScheduleHistory(int liftId);
     }
 }

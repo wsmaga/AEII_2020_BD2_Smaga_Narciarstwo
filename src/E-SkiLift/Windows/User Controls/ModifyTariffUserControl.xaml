@@ -10,15 +10,17 @@
     <StackPanel Orientation="Vertical">
         <Canvas>
             <Label Content="MODIFY TARIFF" Width="600" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-            <Label Content="Starts with date:" Canvas.Top="30" Canvas.Left="10"/>
-            <Label Content="Ends with date:" Canvas.Top="30" Canvas.Left="140"/>
-            <DatePicker Name="startDate" Canvas.Top="60" Canvas.Left="10"/>
-            <DatePicker Name="endDate" Canvas.Top="60" Canvas.Left="140"/>
-            <Label Content="Point price" Canvas.Top="90" Canvas.Left="10"/>
-            <wpfTool:DecimalUpDown FormatString="C2" Increment=".1" Canvas.Top="90" Canvas.Left="100" Width="70"/>
-            <Label Content="Hour price" Canvas.Top="120" Canvas.Left="10"/>
-            <wpfTool:DecimalUpDown FormatString="C2" Increment=".1" Canvas.Top="120" Canvas.Left="100" Width="70"/>
-            <Button Content=" MODIFY TARIFF " Name="modifyTariffButton" Click="modifyTariffButton_Click" Canvas.Top="160" Canvas.Left="10"/>
+            <Label Content="Lift ID:" FontWeight="Bold" Canvas.Left="14" Canvas.Top="31"/>
+            <Label Content="Currently selected Lift ID: null" Name="SelectedLiftLabel" Canvas.Left="14" Canvas.Top="98" FontWeight="Bold"/>
+            <Label Content="Starts with date:" Canvas.Top="124" Canvas.Left="14"/>
+            <Label Content="Ends with date:" Canvas.Top="124" Canvas.Left="144"/>
+            <DatePicker IsEnabled="False" Name="TariffBeginDate" Canvas.Top="154" Canvas.Left="14"/>
+            <TextBox Name="endDate" Canvas.Top="154" Canvas.Left="144" Width="90" Text="null" IsEnabled="False"/>
+            <wpfTool:IntegerUpDown Minimum="1" Width="50" Canvas.Left="14" Canvas.Top="62" Name="LiftIdPicker" />
+            <Label Content="Point cost" Canvas.Top="183" Canvas.Left="14"/>
+            <Button Content=" Select lift " Name="selectLiftButton" Click="selectLiftButton_Click" Canvas.Top="62" Canvas.Left="104"/>
+            <wpfTool:IntegerUpDown Canvas.Top="190" Canvas.Left="104" Width="70" Minimum="1" Name="PointCostPicker" IsEnabled="False"/>
+            <Button Content=" MODIFY TARIFF " Name="modifyTariffButton" Click="modifyTariffButton_Click" Canvas.Top="234" Canvas.Left="14" IsEnabled="False"/>
         </Canvas>
     </StackPanel>
 </UserControl>

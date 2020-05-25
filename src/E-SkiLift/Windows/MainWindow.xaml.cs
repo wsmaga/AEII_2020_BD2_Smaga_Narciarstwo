@@ -51,14 +51,15 @@ namespace E_SkiLift.Windows
             currentPage.Content = loginPage;
         }
 
-        public void ShowAdminPage()
+        public void ShowAdminPage(User loggedUser)
         {
+            adminPage.SetUser(loggedUser);
             currentPage.Content = adminPage;
         }
 
-        public void ShowCashierPage(User loggedCashier)
+        public void ShowCashierPage(User loggedUser)
         {
-            cashierPage.SetUser(loggedCashier);
+            cashierPage.SetUser(loggedUser);
             currentPage.Content = cashierPage;
         }
 

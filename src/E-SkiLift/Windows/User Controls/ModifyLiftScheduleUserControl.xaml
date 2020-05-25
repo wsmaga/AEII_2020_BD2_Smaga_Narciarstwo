@@ -11,11 +11,12 @@
         <Canvas>
             <Label Content="MODIFY SCHEDULE" Width="600" FontWeight="Bold" HorizontalContentAlignment="Center"/>
             <Label Content="Lift ID" Canvas.Top="40" Canvas.Left="10"/>
-            <wpfTool:IntegerUpDown Canvas.Top="40" Canvas.Left="100" Width="50"/>
+            <Button Content="Select lift" Name="selectLiftSchedule" Click="selectLiftSchedule_Click" Canvas.Top="40" Canvas.Left="185" Width="68"/>
+            <wpfTool:IntegerUpDown Canvas.Top="40" Canvas.Left="100" Width="50" Minimum="1"/>
             <Label Content="Starts with date:" Canvas.Top="70" Canvas.Left="10"/>
             <Label Content="Ends with date:" Canvas.Top="70" Canvas.Left="140"/>
-            <DatePicker Name="startDate" Canvas.Top="95" Canvas.Left="10"/>
-            <DatePicker Name="endDate" Canvas.Top="95" Canvas.Left="140"/>
+            <DatePicker Name="startDate" Canvas.Top="95" Canvas.Left="10" IsEnabled="False"/>
+            <TextBox Name="endDate" Canvas.Top="95" Canvas.Left="140" Width="90" Text="null" IsEnabled="False"/>
             <Label Content="Mon" Canvas.Top="160" Canvas.Left="10"/>
             <Label Content="Tue" Canvas.Top="190" Canvas.Left="10"/>
             <Label Content="Wed" Canvas.Top="220" Canvas.Left="10"/>
@@ -39,7 +40,7 @@
             <wpfTool:TimePicker Canvas.Top="280" Canvas.Left="300" Width="100"/>
             <wpfTool:TimePicker Canvas.Top="310" Canvas.Left="300" Width="100"/>
             <wpfTool:TimePicker Canvas.Top="340" Canvas.Left="300" Width="100"/>
-            <Button Content=" MODIFY SCHEDULE " Name="modifyScheduleButton" Click="modifyScheduleButton_Click" Canvas.Top="390" Canvas.Left="10"/>
+            <Button IsEnabled="False" Content=" MODIFY SCHEDULE " Name="modifyScheduleButton" Click="modifyScheduleButton_Click" Canvas.Top="390" Canvas.Left="10"/>
         </Canvas>
     </StackPanel>
 </UserControl>

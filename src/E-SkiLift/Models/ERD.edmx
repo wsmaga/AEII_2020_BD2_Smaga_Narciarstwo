@@ -73,7 +73,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BeginDate" Type="datetime" Nullable="false" />
-    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="true" />
     <Property Name="PointCost" Type="int" Nullable="false" />
     <Property Name="SkiLiftID" Type="int" Nullable="false" />
   </EntityType>
@@ -94,7 +94,7 @@
     <Property Name="BeginHour" Type="nvarchar(max)" Nullable="false" />
     <Property Name="EndHour" Type="nvarchar(max)" Nullable="false" />
     <Property Name="BeginDate" Type="datetime" Nullable="false" />
-    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="true" />
   </EntityType>
   <EntityType Name="LiftUsageHistorySet">
     <Key>
@@ -271,7 +271,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BeginDate" Type="DateTime" Nullable="false" />
-          <Property Name="EndDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Nullable="true" />
           <Property Name="PointCost" Type="Int32" Nullable="false" />
           <NavigationProperty Name="SkiLift" Relationship="ERD.LiftTariffSkiLift" FromRole="LiftTariff" ToRole="SkiLift" />
           <Property Name="SkiLiftID" Type="Int32" Nullable="false" />
@@ -307,7 +307,7 @@
           <Property Name="BeginHour" Type="String" Nullable="false" />
           <Property Name="EndHour" Type="String" Nullable="false" />
           <Property Name="BeginDate" Type="DateTime" Nullable="false" />
-          <Property Name="EndDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Nullable="true" />
           <NavigationProperty Name="SkiLift" Relationship="ERD.SkiLiftScheduleSkiLift" FromRole="SkiLiftSchedule" ToRole="SkiLift" />
         </EntityType>
         <EntityType Name="LiftUsageHistory">
