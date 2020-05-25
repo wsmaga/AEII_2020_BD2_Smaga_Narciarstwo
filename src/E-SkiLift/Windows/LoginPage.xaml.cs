@@ -40,7 +40,7 @@ namespace E_SkiLift.Windows
                 switch((UserType)loggedUser.UserType)
                 {
                     case UserType.Admin:
-                        parentWindow.ShowAdminPage();
+                        parentWindow.ShowAdminPage(loggedUser);
                         break;
                     case UserType.Owner:
                         parentWindow.ShowOwnerPage();

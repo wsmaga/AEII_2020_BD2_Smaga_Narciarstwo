@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-enum UserType { Admin = 0, Owner = 1, Cashier = 2}
+
 namespace E_SkiLift.Models
 {
+    public enum UserType { Admin = 0, Owner = 1, Cashier = 2 }
     partial class User
     { 
         public static User SignIn(string login, string password)

@@ -21,16 +21,18 @@ namespace E_SkiLift.Windows.User_Controls
     /// </summary>
     public partial class DeleteUserUserControl : UserControl
     {
-        public DeleteUserUserControl()
+        private readonly Admin LoggedAdmin;
+        public DeleteUserUserControl(Admin _loggedAdmin)
         {
             InitializeComponent();
+            LoggedAdmin = _loggedAdmin;
         }
         private void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
             Nullable<int> userId=UserIdComp.Value;
             bool result=false;
             if (userId.HasValue)
-                result = Admin.RemoveUser(userId.Value);
+                result = LoggedAdmin.RemoveUser(userId.Value);
             if(result)
                 MessageBox.Show("Successfuly deleted user.");
             else

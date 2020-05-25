@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace E_SkiLift.Models
 {
-    class Cashier: User
+    public class Cashier: User
     {
         private readonly UnitOfWork uow = new UnitOfWork(new ERDContainer());
 

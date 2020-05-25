@@ -39,9 +39,7 @@ namespace E_SkiLift.Windows
             LoggedCashier = new Cashier
             {
                 ID = loggedUser.ID,
-                Login = loggedUser.Login,
                 Name = loggedUser.Name,
-                Password = loggedUser.Password,
                 UserType = loggedUser.UserType
             };
         }

@@ -35,7 +35,8 @@ namespace E_SkiLift.Windows
 
         private void tariffButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new ModifyTariffUserControl();
+            //Temporarly changed to null change to owner when you implement owner page
+            this.contentControl.Content = new ModifyTariffUserControl(null);
         }
 
         private void printCompanySummaryButton_Click(object sender, RoutedEventArgs e)

@@ -16,7 +16,7 @@ namespace E_SkiLift.Models
     {
         public int ID { get; set; }
         public System.DateTime BeginDate { get; set; }
-        public System.DateTime EndDate { get; set; }
+        public Nullable<System.DateTime> EndDate { get; set; }
         public int PointCost { get; set; }
         public int SkiLiftID { get; set; }
     

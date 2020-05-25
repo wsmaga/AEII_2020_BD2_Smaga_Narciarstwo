@@ -1,4 +1,5 @@
-﻿using E_SkiLift.Windows.User_Controls;
+﻿using E_SkiLift.Models;
+using E_SkiLift.Windows.User_Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,26 +23,37 @@ namespace E_SkiLift.Windows
     public partial class AdminPage : Page
     {
         private readonly MainWindow parentWindow;
+        private Admin LoggedAdmin { get; set; }
 
         public AdminPage(MainWindow parentWindow)
         {
             InitializeComponent();
             this.parentWindow = parentWindow;
-            this.contentControl.Content = new AddUserUserControl();
+        }
+
+        public void SetUser(User loggedUser)
+        {
+            LoggedAdmin = new Admin()
+            {
+                ID = loggedUser.ID,
+                Name = loggedUser.Name,
+                UserType = loggedUser.UserType
+            };
+            LoggedAdminLabel.Content = LoggedAdmin.Name;
         }
 
         private void addUserButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new AddUserUserControl();
+            this.contentControl.Content = new AddUserUserControl(LoggedAdmin);
         }
         private void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new DeleteUserUserControl();
+            this.contentControl.Content = new DeleteUserUserControl(LoggedAdmin);
         }
 
         private void addLiftButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new AddLiftUserControl();
+            this.contentControl.Content = new AddLiftUserControl(LoggedAdmin);
         }
 
         private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
@@ -51,12 +63,12 @@ namespace E_SkiLift.Windows
 
         private void tariffButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new ModifyTariffUserControl();
+            this.contentControl.Content = new ModifyTariffUserControl(LoggedAdmin);
         }
 
         private void deleteLiftButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new DeleteLiftUserControl();
+            this.contentControl.Content = new DeleteLiftUserControl(LoggedAdmin);
         }
 
         private void openCloseButton_Click(object sender, RoutedEventArgs e)

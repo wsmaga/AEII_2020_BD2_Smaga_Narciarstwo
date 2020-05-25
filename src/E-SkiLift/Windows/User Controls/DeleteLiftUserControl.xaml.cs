@@ -21,9 +21,11 @@ namespace E_SkiLift.Windows.User_Controls
     /// </summary>
     public partial class DeleteLiftUserControl : UserControl
     {
-        public DeleteLiftUserControl()
+        private readonly Admin LoggedAdmin;
+        public DeleteLiftUserControl(Admin _loggedAdmin)
         {
             InitializeComponent();
+            LoggedAdmin = _loggedAdmin;
         }
 
         private void deleteLiftButton_Click(object sender, RoutedEventArgs e)
@@ -31,11 +33,15 @@ namespace E_SkiLift.Windows.User_Controls
             Nullable<int> liftId = LiftIdComp.Value;
             bool result = false;
             if (liftId.HasValue)
-                result = Admin.RemoveSkiLift(liftId.Value);
+                result = LoggedAdmin.RemoveSkiLift(liftId.Value);
             if (result)
                 MessageBox.Show("Successfuly deleted lift.");
             else
-                MessageBox.Show("Could not delete lift with " + liftId??"null" + " id");
+            {
+                string val = liftId?.ToString() ?? "null";
+                MessageBox.Show("Could not delete lift with " + liftId ?? "null" + " id");
+            }
+                
         }
     }
 }
