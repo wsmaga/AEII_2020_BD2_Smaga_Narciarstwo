@@ -22,13 +22,13 @@ namespace E_SkiLift.Windows.User_Controls
     /// </summary>
     public partial class ModifyTariffUserControl : UserControl
     {
-        private readonly IModifiesTariff LoggedAdmin;
+        private readonly IModifiesLiftData LoggedEditor;
         private int SelectedLiftID=-1;
         private int OldPointCost=0;
-        public ModifyTariffUserControl(IModifiesTariff _loggedAdmin)
+        public ModifyTariffUserControl(IModifiesLiftData _loggedEditor)
         {
             InitializeComponent();
-            LoggedAdmin = _loggedAdmin;
+            LoggedEditor = _loggedEditor;
             this.TariffBeginDate.SelectedDate = DateTime.Today;
         }
 
@@ -39,7 +39,7 @@ namespace E_SkiLift.Windows.User_Controls
             {
                 if (newPointCost.Value != OldPointCost)
                 {
-                    bool result=LoggedAdmin.UpdateLiftTariff(SelectedLiftID, newPointCost.Value, DateTime.Today);
+                    bool result=LoggedEditor.UpdateLiftTariff(SelectedLiftID, newPointCost.Value, DateTime.Today);
                     if (result)
                         MessageBox.Show("Successfuly updated lift tariff.");
                     else
@@ -59,10 +59,10 @@ namespace E_SkiLift.Windows.User_Controls
             Nullable<int> liftId = LiftIdPicker.Value;
             if (liftId.HasValue)
             {
-                if (LoggedAdmin.SkiLiftExists(liftId.Value))
+                if (LoggedEditor.SkiLiftExists(liftId.Value))
                 {
                     SelectedLiftID = liftId.Value;
-                    int cost=LoggedAdmin.GetCurrentLiftPointCost(liftId.Value);
+                    int cost=LoggedEditor.GetCurrentLiftPointCost(liftId.Value);
                     if(cost>0)
                     {
                         SelectedLiftLabel.Content = "Currently selected Lift ID: " + SelectedLiftID;

@@ -58,7 +58,7 @@ namespace E_SkiLift.Windows
 
         private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new ModifyLiftScheduleUserControl();
+            this.contentControl.Content = new ModifyLiftScheduleUserControl(LoggedAdmin);
         }
 
         private void tariffButton_Click(object sender, RoutedEventArgs e)
@@ -79,6 +79,7 @@ namespace E_SkiLift.Windows
         private void logoutButton_Click(object sender, RoutedEventArgs e)
         {
             parentWindow.ShowLoginPage();
+            LoggedAdmin = null;
         }
     }
 }

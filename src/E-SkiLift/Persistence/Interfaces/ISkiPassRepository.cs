@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_SkiLift.Persistence.Interfaces
 {
-    interface ISkiPassRepository : IRepository<SkiPass>
+    public interface ISkiPassRepository : IRepository<SkiPass>
     {
 
     }

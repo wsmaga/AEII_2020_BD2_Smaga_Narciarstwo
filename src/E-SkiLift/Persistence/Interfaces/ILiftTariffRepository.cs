@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_SkiLift.Persistence.Interfaces
 {
-    interface ILiftTariffRepository : IRepository<LiftTariff>
+    public interface ILiftTariffRepository : IRepository<LiftTariff>
     {
         LiftTariff GetLatestLiftTariff(int liftId);
         IEnumerable<LiftTariff> GetLiftTariffHistory(int liftId);

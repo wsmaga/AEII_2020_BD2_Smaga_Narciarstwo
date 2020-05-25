@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_SkiLift.Persistence.Interfaces
 {
-    interface ISkiLiftScheduleRepository: IRepository<SkiLiftSchedule>
+    public interface ISkiLiftScheduleRepository: IRepository<SkiLiftSchedule>
     {
         IEnumerable<SkiLiftSchedule> GetCurrentFullLiftSchedule(int liftId);
         SkiLiftSchedule GetCurrentDayLiftSchedule(int liftId, byte dayOfWeek);

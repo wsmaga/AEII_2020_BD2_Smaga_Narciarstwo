@@ -11,7 +11,7 @@ using E_SkiLift.Persistence.Repositories;
 
 namespace E_SkiLift.Repository
 {
-    class UnitOfWork:IDisposable
+    public class UnitOfWork:IDisposable
     {
         private readonly ERDContainer context;
         public UnitOfWork(ERDContainer _context)

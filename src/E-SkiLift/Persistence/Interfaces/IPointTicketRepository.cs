@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_SkiLift.Persistence.Interfaces
 {
-    interface IPointTicketRepository : IRepository<PointTicket>
+    public interface IPointTicketRepository : IRepository<PointTicket>
     {
     }
 }

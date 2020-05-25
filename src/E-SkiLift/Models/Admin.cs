@@ -9,9 +9,8 @@ using E_SkiLift.Repository;
 
 namespace E_SkiLift.Models
 {
-    public class Admin: User, IModifiesTariff
+    public class Admin: ModifiesLiftData
     {
-        private readonly UnitOfWork uow = new UnitOfWork(new ERDContainer());
         public bool AddUser(UserType _type, string _name, string _login, string _password)
         {
             uow.Users.Add(new User {Login=_login,Password=_password,Name=_name,UserType=(int)_type });
@@ -47,21 +46,6 @@ namespace E_SkiLift.Models
                 uow.SkiLifts.CloseLift(id);
             return uow.Complete() == 1;
         }
-        public bool SkiLiftExists(int id)
-        {
-            return uow.SkiLifts.Get(id) != null;
-        }
-        public int GetCurrentLiftPointCost(int id)
-        {
-            LiftTariff tariff = uow.LiftTariffs.GetLatestLiftTariff(id);
-            return tariff?.PointCost??0;
-        }
-        public bool UpdateLiftTariff(int id, int newPointCost, System.DateTime newBeginDate)
-        {
-            LiftTariff oldTariff=uow.LiftTariffs.GetLatestLiftTariff(id);
-            oldTariff.EndDate = newBeginDate;
-            uow.LiftTariffs.Add(new LiftTariff { SkiLiftID=id, BeginDate=newBeginDate, PointCost=newPointCost});
-            return uow.Complete() == 2;
-        }
+        
     }
 }
