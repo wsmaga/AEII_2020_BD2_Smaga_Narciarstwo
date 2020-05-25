@@ -46,7 +46,7 @@ namespace E_SkiLift.Windows
                         parentWindow.ShowOwnerPage();
                         break;
                     case UserType.Cashier:
-                        parentWindow.ShowCashierPage();
+                        parentWindow.ShowCashierPage(loggedUser);
                         break;
                 }
             }

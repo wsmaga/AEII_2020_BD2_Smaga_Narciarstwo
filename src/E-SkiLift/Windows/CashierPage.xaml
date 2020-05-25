@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
       xmlns:local="clr-namespace:E_SkiLift.Windows"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -18,10 +19,18 @@
                         
                         <WrapPanel>
                             <Label Content="Ticket type: "/>
-                            <ComboBox Width="100" HorizontalAlignment="Left">
+                            <ComboBox Width="100" Name="TypePicker" HorizontalAlignment="Left" SelectionChanged="ComboBox_SelectionChanged">
                                 <ComboBoxItem IsSelected="True">Point ticket</ComboBoxItem>
                                 <ComboBoxItem>Ski Pass</ComboBoxItem>
                             </ComboBox>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Name="PointsLabel" Content="Points: "/>
+                            <wpfTool:IntegerUpDown Name="PointsPicker" Value="10"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Name="TimeLabel" Content="Expiration time: " IsEnabled="False"/>
+                            <wpfTool:DateTimePicker Name="TimePicker" Value="01-31-1996" ShowButtonSpinner="False" IsEnabled="False"/>
                         </WrapPanel>
                         <Button Content=" SELL NEW TICKET " Name="sellButton" Click="sellButton_Click" MaxWidth="100" HorizontalAlignment="Left"/>
                     </WrapPanel>
@@ -34,7 +43,7 @@
                         <Label Content="Existing tickets actions" FontWeight="Bold"/>
                         <WrapPanel>
                             <Label Content="Ticket ID: "/>
-                            <TextBox Name="ticketID" MaxLines="1" Width="30"/>
+                            <wpfTool:IntegerUpDown Name="ticketID" Width="50"/>
                         </WrapPanel>
                         <Button Content=" DISPLAY TICKET SUMMARY " Name="summaryButton" Click="summaryButton_Click"/>
                         <Button Content=" LOCK TICKET " Name="lockButton" Click="lockButton_Click"/>

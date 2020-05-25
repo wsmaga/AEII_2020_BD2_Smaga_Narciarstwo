@@ -28,6 +28,8 @@ namespace E_SkiLift.Windows
         public SkierSummaryPage skierSummaryPage;
 
         public ExampleModel exampleModel;
+
+        
         
         public MainWindow()
         {
@@ -54,8 +56,9 @@ namespace E_SkiLift.Windows
             currentPage.Content = adminPage;
         }
 
-        public void ShowCashierPage()
+        public void ShowCashierPage(User loggedCashier)
         {
+            cashierPage.SetUser(loggedCashier);
             currentPage.Content = cashierPage;
         }
 

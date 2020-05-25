@@ -20,12 +20,18 @@ namespace E_SkiLift.Repository
             Users = new UserRepository(context);
             SkiLifts = new SkiLiftRepository(context);
             LiftTariffs = new LiftTariffRepository(context);
-            SkiLiftSchedules = new SkiLiftScheduleRepository(context); 
+            SkiLiftSchedules = new SkiLiftScheduleRepository(context);
+            SkiPasses = new SkiPassRepository(context);
+            PointTickets = new PointTicketRepository(context);
+            Tickets = new TicketRepository(context);
         }
         public IUserRepository Users { get; private set; }
         public ISkiLiftRepository SkiLifts { get; private set; }
         public ILiftTariffRepository LiftTariffs { get; private set; }
         public ISkiLiftScheduleRepository SkiLiftSchedules { get; private set; }
+        public ISkiPassRepository SkiPasses { get; private set; }
+        public IPointTicketRepository PointTickets { get; private set; }
+        public ITicketRepository Tickets { get; private set; }
         public int Complete()
         {
             return context.SaveChanges();
