@@ -69,7 +69,8 @@ namespace E_SkiLift.Windows.User_Controls
             System.DateTime TarBeginDate =  DateTime.Today;
             //System.DateTime TarEndDate = TariffEndDate.SelectedDate ?? DateTime.Today;
             int TarPointCost = TariffPointCost.Value ?? 1;
-            if(LoggedAdmin.AddSkiLift(TarBeginDate,TarPointCost,SchBeginHours,SchEndHours,LiftStartsOpen.IsChecked??true))
+            bool res = LoggedAdmin.AddSkiLift(TarBeginDate, TarPointCost, SchBeginHours, SchEndHours, LiftStartsOpen.IsChecked ?? true);
+            if (res)
                 MessageBox.Show("Added new lift.");
             else
                 MessageBox.Show("Could not add new lift.");

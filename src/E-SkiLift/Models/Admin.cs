@@ -13,8 +13,13 @@ namespace E_SkiLift.Models
     {
         public bool AddUser(UserType _type, string _name, string _login, string _password)
         {
-            uow.Users.Add(new User {Login=_login,Password=_password,Name=_name,UserType=(int)_type });
-            return uow.Complete() == 1;
+            if (uow.Users.GetUserByLogin(_login)==null)
+            {
+                uow.Users.Add(new User { Login = _login, Password = _password, Name = _name, UserType = (int)_type });
+                return uow.Complete() == 1;
+            }
+            else
+                return false;
         }
         public bool RemoveUser(int _id)
         {
