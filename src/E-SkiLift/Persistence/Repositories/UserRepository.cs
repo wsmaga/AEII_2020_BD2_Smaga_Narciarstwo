@@ -14,8 +14,15 @@ namespace E_SkiLift.Persistence
         public UserRepository(ERDContainer dbContext): base(dbContext) { }
         public User GetUserByCredentials(string login, string password)
         {
-            return ERDContainer.Set<User>().Where(user=>user.Login==login&&user.Password==password).FirstOrDefault<User>();
+            return ERDContainer.Set<User>().Where(user=>user.Login==login&&user.Password==password).FirstOrDefault();
         }
+
+        public User GetUserByLogin(string login)
+        {
+            return ERDContainer.Set<User>().Where(user => user.Login == login).FirstOrDefault();
+        }
+
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
+        
     }
 }

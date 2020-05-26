@@ -10,5 +10,6 @@ namespace E_SkiLift.Persistence
     public interface IUserRepository: IRepository<User>
     {
         User GetUserByCredentials(string login, string password);
+        User GetUserByLogin(string login);
     }
 }

@@ -30,7 +30,15 @@ namespace E_SkiLift.Windows
 
         private void addUserButton_Click(object sender, RoutedEventArgs e)
         {
-            LoggedAdmin.AddUser((UserType) int.Parse(AddUserType.Text), AddUserName.Text, AddUserLogin.Text, AddUserPassword.Text);
+            bool res=LoggedAdmin.AddUser((UserType) int.Parse(AddUserType.Text), AddUserName.Text, AddUserLogin.Text, AddUserPassword.Text);
+            if (res)
+                MessageBox.Show("Succesfuly added new user.");
+            else
+                MessageBox.Show("Could not add new user.");
+            RemoveTextBoxContent();
+        }
+        private void RemoveTextBoxContent()
+        {
             MessageBox.Show("Added new user.");
             AddUserName.Text = "";
             AddUserLogin.Text = "";
