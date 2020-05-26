@@ -10,10 +10,12 @@
     <StackPanel Orientation="Vertical">
         <Canvas>
             <Label Content="OPEN/CLOSE LIFT" Width="600" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-            <Label Content="Lift ID" Canvas.Top="40" Canvas.Left="10"/>
-            <wpfTool:IntegerUpDown Canvas.Top="40" Canvas.Left="100" Width="50"/>
-            <Button Content=" OPEN LIFT " Name="openLiftButton" Click="openLiftButton_Click" Canvas.Top="80" Canvas.Left="10"/>
-            <Button Content=" CLOSE LIFT " Name="closeLifteButton" Click="closeLiftButton_Click" Canvas.Top="80" Canvas.Left="110"/>
+            <Label Content="Lift ID" Canvas.Top="36" Canvas.Left="24"/>
+            <Label Name="SelectedLiftLabel" Content="Currently selected Lift ID: null" FontWeight="Bold" Canvas.Left="24" Canvas.Top="78"/>
+            <wpfTool:IntegerUpDown Name="LiftIdPicker" Canvas.Top="43" Canvas.Left="86" Width="50" Minimum="1"/>
+            <Button Content=" OPEN LIFT " IsEnabled="False" Name="openLiftButton" Click="openLiftButton_Click" Canvas.Top="113" Canvas.Left="24"/>
+            <Button Content=" CLOSE LIFT " IsEnabled="False" Name="closeLifteButton" Click="closeLiftButton_Click" Canvas.Top="113" Canvas.Left="115"/>
+            <Button Content=" Select Lift " Name="selectLiftButton" Click="selectLiftButton_Click" Canvas.Top="43" Canvas.Left="170"/>
         </Canvas>
     </StackPanel>
 </UserControl>

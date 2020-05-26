@@ -51,28 +51,7 @@ namespace E_SkiLift.Windows
                 }
             }
             else
-                errorTextField.Content = "Wrong password my nigga"; 
-           /* if (this.password.Password.Equals("root")) //in the future we can use SecureString while handling passwords
-                switch (this.login.Text)
-                {
-                    case "cashier":
-                        parentWindow.ShowCashierPage();
-                        break;
-
-                    case "owner":
-                        parentWindow.ShowOwnerPage();
-                        break;
-
-                    case "admin":
-                        parentWindow.ShowAdminPage();
-                        break;
-
-                    default:
-                        errorTextField.Content = "(MOCKUP MODE)Invalid username!";
-                        break;
-                }
-            else
-                errorTextField.Content = "(MOCKUP MODE)Debug password is \"root\"!";*/
+                errorTextField.Content = "Wrong password"; 
         }
 
         private void gateButton_Click(object sender, RoutedEventArgs e)
