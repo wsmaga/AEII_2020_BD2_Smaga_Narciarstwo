@@ -73,7 +73,7 @@ namespace E_SkiLift.Windows
 
         private void openCloseButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new OpenCloseLiftUserControl();
+            this.contentControl.Content = new OpenCloseLiftUserControl(LoggedAdmin);
         }
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)

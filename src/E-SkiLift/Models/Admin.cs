@@ -47,5 +47,9 @@ namespace E_SkiLift.Models
             return uow.Complete() == 1;
         }
         
+        public Nullable<bool> LiftIsOpen(int id)
+        {
+            return uow.SkiLifts.Get(id)?.IsOpen;
+        }
     }
 }
