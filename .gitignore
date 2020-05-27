@@ -356,5 +356,5 @@ healthchecksdb
 MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
-.ionide/?? src/E-SkiLift/App.config
-?? src/E-SkiLift/cd
+.ionide/
+src/E-SkiLift/App.config
