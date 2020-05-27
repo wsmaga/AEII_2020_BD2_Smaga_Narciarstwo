@@ -39,7 +39,6 @@ namespace E_SkiLift.Windows
         }
         private void RemoveTextBoxContent()
         {
-            MessageBox.Show("Added new user.");
             AddUserName.Text = "";
             AddUserLogin.Text = "";
             AddUserPassword.Text = "";
