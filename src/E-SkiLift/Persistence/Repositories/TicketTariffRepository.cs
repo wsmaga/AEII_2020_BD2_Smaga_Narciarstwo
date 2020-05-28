@@ -13,16 +13,16 @@ namespace E_SkiLift.Persistence.Repositories
         public TicketTariffRepository(ERDContainer dbContext) : base(dbContext) { }
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
 
-        TicketTariff GetLatestTicketTariff()
+        public TicketTariff GetLatestTicketTariff()
         {
             return ERDContainer.Set<TicketTariff>().OrderByDescending(ticket=>ticket.BeginDate).FirstOrDefault();
         }
-        IEnumerable<TicketTariff> GetTicketTariffHistory()
+        public IEnumerable<TicketTariff> GetTicketTariffHistory()
         {
             return ERDContainer.Set<TicketTariff>().OrderByDescending(ticket => ticket.BeginDate);
         }
 
-        IEnumerable<TicketTariff> GetTicketTariffHistory(DateTime beginDate, DateTime endDate)
+        public IEnumerable<TicketTariff> GetTicketTariffHistory(DateTime beginDate, DateTime endDate)
         {
             return ERDContainer.Set<TicketTariff>().Where(ticket=>ticket.BeginDate > beginDate && ticket.EndDate < endDate).OrderByDescending(ticket => ticket.BeginDate);
         }
