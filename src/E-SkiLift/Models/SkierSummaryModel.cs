@@ -22,11 +22,11 @@ namespace E_SkiLift.Models
 
             SummaryEntryList = new List<SummaryEntry>();
             _liftIdList.Add(new LiftID("All"));
-            for (int i = 0; i < liftUsageHistory.Length; i++)
+            foreach(LiftUsageHistory luh in liftUsageHistory)
             {
-                SummaryEntryList.Add(new SummaryEntry(liftUsageHistory[i].Date.ToString(), liftUsageHistory[i].SkiLiftID));
-                if (!_liftIdList.Contains(new LiftID(liftUsageHistory[i].SkiLiftID.ToString())))
-                    _liftIdList.Add(new LiftID(liftUsageHistory[i].SkiLiftID.ToString()));
+                SummaryEntryList.Add(new SummaryEntry(luh.Date.ToString(), luh.SkiLiftID));
+                if (!_liftIdList.Contains(new LiftID(luh.SkiLiftID.ToString())))
+                    _liftIdList.Add(new LiftID(luh.SkiLiftID.ToString()));
             }
         }
 
@@ -38,16 +38,16 @@ namespace E_SkiLift.Models
             TicketID = ticketID;
 
             SummaryEntryList = new List<SummaryEntry>();
-            for (int i = 0; i < liftUsageHistory.Length; i++)
+            foreach(LiftUsageHistory luh in liftUsageHistory)
             {
-                SummaryEntryList.Add(new SummaryEntry(liftUsageHistory[i].Date.ToString(), liftUsageHistory[i].SkiLiftID));
+                SummaryEntryList.Add(new SummaryEntry(luh.Date.ToString(), luh.SkiLiftID));
             }
 
             _liftIdList.Add(new LiftID("All"));
-            for (int i = 0; i < liftUsageHistoryLiftIDs.Length; i++)
+            foreach(LiftUsageHistory luhID in liftUsageHistoryLiftIDs)
             {
-                if (!_liftIdList.Contains(new LiftID(liftUsageHistoryLiftIDs[i].SkiLiftID.ToString())))
-                    _liftIdList.Add(new LiftID(liftUsageHistoryLiftIDs[i].SkiLiftID.ToString()));
+                if (!_liftIdList.Contains(new LiftID(luhID.SkiLiftID.ToString())))
+                    _liftIdList.Add(new LiftID(luhID.SkiLiftID.ToString()));
             }
         }
 
