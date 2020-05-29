@@ -1,6 +1,8 @@
-﻿using System;
+﻿using E_SkiLift.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -39,6 +41,18 @@ namespace E_SkiLift.Windows
             }
 
             this.NavigationService.GoBack();
+        }
+
+        private void Lifts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SkierSummaryModel ssm;
+            int ticketID = int.Parse(TicketID.Content.ToString());
+            SkierSummaryModel.LiftID liftID = (SkierSummaryModel.LiftID)Lifts.SelectedItem;
+            if (liftID.ID == "All")
+                ssm = new SkierSummaryModel(ticketID);
+            else
+                ssm = new SkierSummaryModel(ticketID, int.Parse(liftID.ID));
+            DataContext = ssm;
         }
     }
 }
