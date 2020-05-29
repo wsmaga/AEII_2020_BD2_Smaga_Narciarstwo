@@ -13,10 +13,24 @@ namespace E_SkiLift.Persistence.Repositories
         public LiftUsageHistoryRepository(ERDContainer dbContext) : base(dbContext) { }
 
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
-        public IEnumerable<LiftUsageHistory> GetLiftUsageHistory(int liftId)
+        public IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByLiftID(int liftId)
         {
             return ERDContainer.Set<LiftUsageHistory>()
                 .Where(lift => lift.SkiLiftID == liftId)
+                .OrderByDescending(lift => lift.Date);
+        }
+
+        public IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByTicketID(int ticketID)
+        {
+            return ERDContainer.Set<LiftUsageHistory>()
+                .Where(lift => lift.TicketID == ticketID)
+                .OrderByDescending(lift => lift.Date);
+        }
+
+        public IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByLiftIDAndTicketID(int liftID, int ticketID)
+        {
+            return ERDContainer.Set<LiftUsageHistory>()
+                .Where(lift => lift.TicketID == ticketID && lift.SkiLiftID == liftID)
                 .OrderByDescending(lift => lift.Date);
         }
 
