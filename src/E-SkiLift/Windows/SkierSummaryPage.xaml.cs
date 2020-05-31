@@ -1,6 +1,8 @@
-﻿using System;
+﻿using E_SkiLift.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,6 +34,8 @@ namespace E_SkiLift.Windows
 
         private void returnButton_Click(object sender, RoutedEventArgs e)
         {
+            Lifts.SelectedIndex = -1;
+
             if (!this.NavigationService.CanGoBack) //this should be possible
             {
                 MessageBox.Show("NavigationService could not go back in pages history!", "FATAL ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -39,6 +43,21 @@ namespace E_SkiLift.Windows
             }
 
             this.NavigationService.GoBack();
+        }
+
+        private void Lifts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Lifts.SelectedIndex != -1)
+            {
+                SkierSummaryModel ssm;
+                int ticketID = int.Parse(TicketID.Content.ToString());
+                SkierSummaryModel.LiftID liftID = (SkierSummaryModel.LiftID)Lifts.SelectedItem;
+                if (liftID.ID == "All")
+                    ssm = new SkierSummaryModel(ticketID);
+                else
+                    ssm = new SkierSummaryModel(ticketID, int.Parse(liftID.ID));
+                DataContext = ssm;
+            }
         }
     }
 }

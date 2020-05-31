@@ -27,7 +27,7 @@ namespace E_SkiLift.Windows
         public GatePage gatePage;
         public SkierSummaryPage skierSummaryPage;
 
-        public ExampleModel exampleModel;
+        public SkierSummaryModel skierSummaryModel;
 
         
         
@@ -75,8 +75,8 @@ namespace E_SkiLift.Windows
 
         public void ShowSkierSummaryPage(int ticketID)
         {
-            exampleModel = new ExampleModel(ticketID);
-            skierSummaryPage.DataContext = exampleModel; //Model becomes a data context for a page - it's data can now be binded to the view controls.
+            skierSummaryModel = new SkierSummaryModel(ticketID);
+            skierSummaryPage.DataContext = skierSummaryModel; //Model becomes a data context for a page - it's data can now be binded to the view controls.
             currentPage.Content = skierSummaryPage;
         }
         

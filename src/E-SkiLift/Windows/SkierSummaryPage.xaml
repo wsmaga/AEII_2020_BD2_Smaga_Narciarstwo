@@ -13,18 +13,30 @@
             <WrapPanel Margin="5" Orientation="Vertical">
                 <WrapPanel Orientation="Horizontal">
                     <Label Content="Skier summary for ticket " FontWeight="Bold" FontSize="20"/>
-                    <Label Content="{Binding Path=ExampleIntProperty}" FontWeight="Bold" FontSize="20"/>
+                    <Label Name="TicketID" Content="{Binding Path=TicketID}" FontWeight="Bold" FontSize="20"/>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
+                    <Label Content="Choose Ski Lift " FontWeight="Bold" FontSize="20"/>
+                    <ComboBox Name="Lifts" Width="40" Height="20" ItemsSource="{Binding LiftIdList}" SelectionChanged="Lifts_SelectionChanged">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding ID}" Width="20"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
                 </WrapPanel>
                 <WrapPanel>
                     <Label Content="Lift ID" FontWeight="Bold" MinWidth="50"/>
                     <Label Content="Date" FontWeight="Bold"/>
                 </WrapPanel>
                 <ScrollViewer VerticalScrollBarVisibility="Visible" MaxHeight="400">
-                    <ItemsControl ItemsSource="{Binding ExampleListProperty}">
+                    <ItemsControl ItemsSource="{Binding SummaryEntryList}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel>
-                                    <Label Content="{Binding Id}" MinWidth="50"/>
+                                    <Label Content="{Binding LiftId}" MinWidth="50"/>
                                     <Label Content="{Binding Date}"/>
                                 </WrapPanel>
                             </DataTemplate>

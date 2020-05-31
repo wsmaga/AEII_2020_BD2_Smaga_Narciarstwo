@@ -9,6 +9,10 @@ namespace E_SkiLift.Persistence.Interfaces
 {
     public interface ILiftUsageHistoryRepository : IRepository<LiftUsageHistory>
     {
-        IEnumerable<LiftUsageHistory> GetLiftUsageHistory(int liftId);
+        IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByLiftID(int liftID);
+
+        IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByTicketID(int ticketID);
+
+        IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByLiftIDAndTicketID(int liftID, int ticketID);
     }
 }

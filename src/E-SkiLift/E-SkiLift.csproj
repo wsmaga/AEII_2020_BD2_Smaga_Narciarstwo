@@ -110,13 +110,16 @@
     <Compile Include="Models\Interfaces\IModifiesLiftData.cs" />
     <Compile Include="Models\Interfaces\ModifiesLiftData.cs" />
     <Compile Include="Models\ScheduleContainer.cs" />
+    <Compile Include="Models\SkierSummaryModel.cs" />
     <Compile Include="Persistence\Interfaces\ILiftTariffRepository.cs" />
+    <Compile Include="Persistence\Interfaces\ILiftUsageHistoryRepository.cs" />
     <Compile Include="Persistence\Interfaces\IPointTicketRepository.cs" />
     <Compile Include="Persistence\Interfaces\ISkiLiftRepository.cs" />
     <Compile Include="Persistence\Interfaces\ISkiLiftScheduleRepository.cs" />
     <Compile Include="Persistence\Interfaces\ISkiPassRepository.cs" />
     <Compile Include="Persistence\Interfaces\ITicketRepository.cs" />
     <Compile Include="Persistence\Repositories\LiftTariffRepository.cs" />
+    <Compile Include="Persistence\Repositories\LiftUsageHistoryRepository.cs" />
     <Compile Include="Persistence\Repositories\PointTicketRepository.cs" />
     <Compile Include="Persistence\Repositories\Repository.cs" />
     <Compile Include="Persistence\Interfaces\IRepository.cs" />
