@@ -130,7 +130,6 @@
     <Compile Include="Persistence\Interfaces\ITicketTariffRepository.cs" />
     <Compile Include="Persistence\Repositories\LiftUsageHistoryRepository.cs" />
     <Compile Include="Persistence\Repositories\LiftTariffRepository.cs" />
-    <Compile Include="Persistence\Repositories\LiftUsageHistoryRepository.cs" />
     <Compile Include="Persistence\Repositories\PointTicketRepository.cs" />
     <Compile Include="Persistence\Repositories\Repository.cs" />
     <Compile Include="Persistence\Interfaces\IRepository.cs" />

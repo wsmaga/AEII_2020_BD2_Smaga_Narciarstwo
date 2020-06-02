@@ -9,13 +9,13 @@ GO
 SET IDENTITY_INSERT TicketSet ON;
 GO
 
-INSERT INTO TicketSet(ID, IsValid)
-VALUES (1, 1),
-	(2, 1),
-	(3, 1),
-	(4, 1),
-	(5, 1),
-	(6, 1);
+INSERT INTO TicketSet(ID, IsValid, DateAdded, PriceSold)
+VALUES (1, 1, '2020-06-01 18:00:00', 20.20),
+	(2, 1, '2020-06-01 18:00:00', 18),
+	(3, 1, '2020-06-01 18:00:00', 7),
+	(4, 1, '2020-06-01 18:00:00', 15.50),
+	(5, 1, '2020-06-01 18:00:00', 20),
+	(6, 1, '2020-06-01 18:00:00', 10);
 GO
 
 SET IDENTITY_INSERT TicketSet OFF;
