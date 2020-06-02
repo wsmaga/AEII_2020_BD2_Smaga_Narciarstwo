@@ -9,7 +9,7 @@ namespace E_SkiLift.Persistence.Interfaces
 {
     public interface ITicketTariffRepository : IRepository<TicketTariff>
     {
-
+        
         TicketTariff GetLatestTicketTariff();
         IEnumerable<TicketTariff> GetTicketTariffHistory();
 

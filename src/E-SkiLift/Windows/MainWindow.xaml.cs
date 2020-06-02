@@ -63,8 +63,9 @@ namespace E_SkiLift.Windows
             currentPage.Content = cashierPage;
         }
 
-        public void ShowOwnerPage()
+        public void ShowOwnerPage(User loggedUser)
         {
+            ownerPage.SetUser(loggedUser);
             currentPage.Content = ownerPage;
         }
 
