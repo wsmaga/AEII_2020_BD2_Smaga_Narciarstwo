@@ -65,10 +65,18 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=2.0.0.0, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <HintPath>packages\OxyPlot.Wpf.2.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -109,13 +117,17 @@
     <Compile Include="Models\Cashier.cs" />
     <Compile Include="Models\Interfaces\IModifiesLiftData.cs" />
     <Compile Include="Models\Interfaces\ModifiesLiftData.cs" />
+    <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\ScheduleContainer.cs" />
     <Compile Include="Persistence\Interfaces\ILiftTariffRepository.cs" />
+    <Compile Include="Persistence\Interfaces\ILiftUsageHistoryRepository.cs" />
     <Compile Include="Persistence\Interfaces\IPointTicketRepository.cs" />
     <Compile Include="Persistence\Interfaces\ISkiLiftRepository.cs" />
     <Compile Include="Persistence\Interfaces\ISkiLiftScheduleRepository.cs" />
     <Compile Include="Persistence\Interfaces\ISkiPassRepository.cs" />
     <Compile Include="Persistence\Interfaces\ITicketRepository.cs" />
+    <Compile Include="Persistence\Interfaces\ITicketTariffRepository.cs" />
+    <Compile Include="Persistence\Repositories\LiftUsageHistoryRepository.cs" />
     <Compile Include="Persistence\Repositories\LiftTariffRepository.cs" />
     <Compile Include="Persistence\Repositories\PointTicketRepository.cs" />
     <Compile Include="Persistence\Repositories\Repository.cs" />
@@ -125,6 +137,7 @@
     <Compile Include="Persistence\Repositories\SkiLiftScheduleRepository.cs" />
     <Compile Include="Persistence\Repositories\SkiPassRepository.cs" />
     <Compile Include="Persistence\Repositories\TicketRepository.cs" />
+    <Compile Include="Persistence\Repositories\TicketTariffRepository.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Persistence\Repositories\UserRepository.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -330,6 +343,7 @@
     <Resource Include="Resources\background.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\DeleteAllFromDB.sql" />
     <Content Include="Models\ERD.edmx.sql" />
     <Content Include="Models\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -341,6 +355,7 @@
       <LastGenOutput>Model.cs</LastGenOutput>
       <DependentUpon>ERD.edmx</DependentUpon>
     </Content>
+    <Content Include="Models\Populate.sql" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -43,7 +43,7 @@ namespace E_SkiLift.Windows
                         parentWindow.ShowAdminPage(loggedUser);
                         break;
                     case UserType.Owner:
-                        parentWindow.ShowOwnerPage();
+                        parentWindow.ShowOwnerPage(loggedUser);
                         break;
                     case UserType.Cashier:
                         parentWindow.ShowCashierPage(loggedUser);

@@ -20,7 +20,9 @@ namespace E_SkiLift.Persistence.Repositories
 
         public IEnumerable<LiftTariff> GetLiftTariffHistory(int liftId)
         {
-            return ERDContainer.Set<LiftTariff>().Where(lift => lift.SkiLiftID == liftId).OrderByDescending(lift => lift.BeginDate);
+            return ERDContainer.Set<LiftTariff>()
+                .Where(lift => lift.SkiLiftID == liftId)
+                .OrderByDescending(lift => lift.BeginDate);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using E_SkiLift.Windows.User_Controls;
+﻿using E_SkiLift.Models;
+using E_SkiLift.Windows.User_Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,28 +22,42 @@ namespace E_SkiLift.Windows
     /// </summary>
     public partial class OwnerPage : Page
     {
+
+
         private readonly MainWindow parentWindow;
+
+        private Owner LoggedOwner { get; set; }
 
         public OwnerPage(MainWindow parentWindow)
         {
             InitializeComponent();
             this.parentWindow = parentWindow;
         }
+
+        public void SetUser(User loggedUser)
+        {
+            LoggedOwner = new Owner()
+            {
+                ID = loggedUser.ID,
+                Name = loggedUser.Name,
+                UserType = loggedUser.UserType
+            };
+            LoggedOwnerLabel.Content = LoggedOwner.Name;
+        }
+
         private void liftScheduleButton_Click(object sender, RoutedEventArgs e)
         {
-            //Temporarly changed to null change to owner when you implement owner page
-            this.contentControl.Content = new ModifyLiftScheduleUserControl(null);
+            this.contentControl.Content = new ModifyLiftScheduleUserControl(LoggedOwner);
         }
 
         private void tariffButton_Click(object sender, RoutedEventArgs e)
         {
-            //Temporarly changed to null change to owner when you implement owner page
-            this.contentControl.Content = new ModifyTariffUserControl(null);
+            this.contentControl.Content = new ModifyTariffUserControl(LoggedOwner);
         }
 
         private void printCompanySummaryButton_Click(object sender, RoutedEventArgs e)
         {
-            this.contentControl.Content = new CompanySummaryUserControl();
+            this.contentControl.Content = new CompanySummaryUserControl(LoggedOwner);
         }
 
 
