@@ -1,6 +1,7 @@
 ﻿<Page x:Class="E_SkiLift.Windows.CashierPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
@@ -30,7 +31,7 @@
                         </WrapPanel>
                         <WrapPanel>
                             <Label Name="TimeLabel" Content="Expiration time: " IsEnabled="False"/>
-                            <wpfTool:DateTimePicker Name="TimePicker" Value="01-31-1996" ShowButtonSpinner="False" IsEnabled="False"/>
+                            <wpfTool:DateTimePicker Name="TimePicker" Value="{x:Static sys:DateTime.Now}" ShowButtonSpinner="False" IsEnabled="False"/>
                         </WrapPanel>
                         <Button Content=" SELL NEW TICKET " Name="sellButton" Click="sellButton_Click" MaxWidth="100" HorizontalAlignment="Left"/>
                     </WrapPanel>
