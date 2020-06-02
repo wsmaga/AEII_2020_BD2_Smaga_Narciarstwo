@@ -14,5 +14,7 @@ namespace E_SkiLift.Persistence.Interfaces
         IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByTicketID(int ticketID);
 
         IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByLiftIDAndTicketID(int liftID, int ticketID);
+
+        IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByDate(DateTime from, DateTime to);
     }
 }

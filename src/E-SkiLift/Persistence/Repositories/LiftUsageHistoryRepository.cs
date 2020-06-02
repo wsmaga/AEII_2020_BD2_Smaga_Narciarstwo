@@ -34,5 +34,12 @@ namespace E_SkiLift.Persistence.Repositories
                 .OrderByDescending(lift => lift.Date);
         }
 
+        public IEnumerable<LiftUsageHistory> GetLiftUsageHistoryByDate(DateTime from, DateTime to)
+        {
+            return ERDContainer.Set<LiftUsageHistory>()
+                .Where(lift => lift.Date >= from && lift.Date <= to)
+                .OrderBy(lift => lift.SkiLiftID);
+        }
+
     }
 }
