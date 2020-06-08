@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Lenovo\source\repos\AEII_2020_BD2_Smaga_Narciarstwo\src\E-SkiLift\Models\ERD.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Arkan Mardor\source\repos\AEII_2020_BD2_Smaga_Narciarstwo\src\E-SkiLift\Models\ERD.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
