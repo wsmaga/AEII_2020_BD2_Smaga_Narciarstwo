@@ -44,5 +44,10 @@ namespace E_SkiLift.Windows
             AddUserPassword.Text = "";
             AddUserType.Text = "";
         }
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Resources\\skiLift.chm";
+            System.Windows.Forms.Help.ShowHelp(null, chmFilePath, System.Windows.Forms.HelpNavigator.Topic, "addUser.html");
+        }
     }
 }

@@ -16,6 +16,7 @@
             <Button Content=" OPEN LIFT " IsEnabled="False" Name="openLiftButton" Click="openLiftButton_Click" Canvas.Top="113" Canvas.Left="24"/>
             <Button Content=" CLOSE LIFT " IsEnabled="False" Name="closeLifteButton" Click="closeLiftButton_Click" Canvas.Top="113" Canvas.Left="115"/>
             <Button Content=" Select Lift " Name="selectLiftButton" Click="selectLiftButton_Click" Canvas.Top="43" Canvas.Left="170"/>
+            <Button Content="Help" Name="helpButton" Click="helpButton_Click" Canvas.Top="380" Canvas.Left="10"/>
         </Canvas>
     </StackPanel>
 </UserControl>

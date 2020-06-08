@@ -59,5 +59,6 @@
         </WrapPanel>
 
         <Button Name="logoutButton" Content="LOGOUT" Click="logoutButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20,520,0,0"/>
+        <Button Content="Help" Width="75" Canvas.Left="20" Canvas.Top="185" Click="helpButton_Click"/>
     </Canvas>
 </Page>

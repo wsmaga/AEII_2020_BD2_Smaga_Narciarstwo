@@ -42,6 +42,7 @@
             <wpfTool:TimePicker Name="EndHourSat" Canvas.Top="270" Canvas.Left="300" Width="100"/>
             <wpfTool:TimePicker Name="EndHourSun" Canvas.Top="300" Canvas.Left="300" Width="100"/>
             <Button Content=" ADD LIFT " Name="addLiftButton" Click="addLiftButton_Click" Canvas.Top="350" Canvas.Left="10"/>
+            <Button Content="Help" Name="helpButton" Click="helpButton_Click" Canvas.Top="380" Canvas.Left="10"/>
 
         </Canvas>
 

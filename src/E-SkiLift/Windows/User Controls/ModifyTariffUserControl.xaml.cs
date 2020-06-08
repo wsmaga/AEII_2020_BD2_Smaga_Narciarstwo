@@ -97,5 +97,10 @@ namespace E_SkiLift.Windows.User_Controls
             PointCostPicker.IsEnabled = false;
             PointCostPicker.Value = null;
         }
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Resources\\skiLift.chm";
+            System.Windows.Forms.Help.ShowHelp(null, chmFilePath, System.Windows.Forms.HelpNavigator.Topic, "modifyTariff.html");
+        }
     }
 }

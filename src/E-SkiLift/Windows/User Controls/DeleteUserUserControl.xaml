@@ -13,6 +13,7 @@
             <Label Content="User ID" Canvas.Top="40" Canvas.Left="10"/>
             <wpfTool:IntegerUpDown  Canvas.Top="40" Canvas.Left="100" Width="50" Minimum="1" Name="UserIdComp"/>
             <Button Content=" DELETE USER " Name="deleteUserButton" Click="deleteUserButton_Click" Canvas.Top="80" Canvas.Left="10"/>
+            <Button Content="Help" Name="helpButton" Click="helpButton_Click" Canvas.Top="380" Canvas.Left="10"/>
         </Canvas>
     </StackPanel>
 </UserControl>
