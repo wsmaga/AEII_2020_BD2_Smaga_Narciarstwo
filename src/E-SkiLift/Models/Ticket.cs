@@ -16,5 +16,7 @@ namespace E_SkiLift.Models
     {
         public int ID { get; set; }
         public bool IsValid { get; set; }
+        public System.DateTime DateAdded { get; set; }
+        public double PriceSold { get; set; }
     }
 }
