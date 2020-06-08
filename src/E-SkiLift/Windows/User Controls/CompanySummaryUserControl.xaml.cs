@@ -1,6 +1,6 @@
 ﻿using E_SkiLift.Models;
-using OxyPlot;
-using OxyPlot.Series;
+//using OxyPlot;
+//using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
 using System.Linq;
