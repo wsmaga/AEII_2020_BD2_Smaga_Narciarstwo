@@ -8,11 +8,6 @@
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-<<<<<<< HEAD
-USE [SLDB];
-GO
-=======
->>>>>>> fb28131bad009c045efc7484d93cc0ead5f18390
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
 
