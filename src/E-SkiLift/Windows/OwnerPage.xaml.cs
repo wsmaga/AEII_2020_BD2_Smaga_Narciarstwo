@@ -65,6 +65,10 @@ namespace E_SkiLift.Windows
         {
             parentWindow.ShowLoginPage();
         }
-
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Resources\\skiLift.chm";
+            System.Windows.Forms.Help.ShowHelp(null, chmFilePath, System.Windows.Forms.HelpNavigator.Topic, "ownerPanel.html");
+        }
     }
 }

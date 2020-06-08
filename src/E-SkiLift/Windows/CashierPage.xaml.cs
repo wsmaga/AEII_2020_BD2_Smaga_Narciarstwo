@@ -137,7 +137,11 @@ namespace E_SkiLift.Windows
                     break;
             }
         }
-
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Resources\\skiLift.chm";
+            System.Windows.Forms.Help.ShowHelp(null, chmFilePath, System.Windows.Forms.HelpNavigator.Topic, "cashierPanel.html");
+        }
         private void unlockButton_Click(object sender, RoutedEventArgs e)
         {
             if (ticketID.Value.HasValue)

@@ -82,7 +82,11 @@ namespace E_SkiLift.Windows.User_Controls
             else
                 System.Windows.MessageBox.Show("Cannot update schedule with empty value.");
         }
-
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Resources\\skiLift.chm";
+            System.Windows.Forms.Help.ShowHelp(null, chmFilePath, System.Windows.Forms.HelpNavigator.Topic, "modifyLiftSchedule.html");
+        }
         private void selectLiftSchedule_Click(object sender, RoutedEventArgs e)
         {
             Nullable<int> liftId = LiftIdPicker.Value;

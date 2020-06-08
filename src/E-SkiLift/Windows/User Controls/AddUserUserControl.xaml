@@ -18,7 +18,7 @@
             <TextBox Canvas.Left="290" Canvas.Top="60" Width="100" Name="AddUserPassword"/>
             <TextBox Canvas.Left="440" Canvas.Top="60" Width="100" Name="AddUserType"/>
             <Button Content=" ADD USER " Name="addUserButton" Click="addUserButton_Click" Canvas.Top="100" Canvas.Left="10"/>
-            
+            <Button Content="Help" Name="helpButton" Click="helpButton_Click" Canvas.Top="380" Canvas.Left="10"/>
         </Canvas>
     </StackPanel>
 </UserControl>

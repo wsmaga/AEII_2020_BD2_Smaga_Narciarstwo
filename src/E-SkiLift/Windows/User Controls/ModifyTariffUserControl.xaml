@@ -21,6 +21,7 @@
             <Button Content=" Select lift " Name="selectLiftButton" Click="selectLiftButton_Click" Canvas.Top="62" Canvas.Left="104"/>
             <wpfTool:IntegerUpDown Canvas.Top="190" Canvas.Left="104" Width="70" Minimum="1" Name="PointCostPicker" IsEnabled="False"/>
             <Button Content=" MODIFY TARIFF " Name="modifyTariffButton" Click="modifyTariffButton_Click" Canvas.Top="234" Canvas.Left="14" IsEnabled="False"/>
+            <Button Content="Help" Name="helpButton" Click="helpButton_Click" Canvas.Top="380" Canvas.Left="10"/>
         </Canvas>
     </StackPanel>
 </UserControl>
