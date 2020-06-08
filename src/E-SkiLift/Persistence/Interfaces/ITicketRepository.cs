@@ -9,5 +9,6 @@ namespace E_SkiLift.Persistence.Interfaces
 {
     public interface ITicketRepository : IRepository<Ticket>
     {
+        int GetAmountOfTicketsSold(DateTime from, DateTime to);
     }
 }

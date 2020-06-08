@@ -24,6 +24,7 @@ namespace E_SkiLift.Repository
             SkiPasses = new SkiPassRepository(context);
             PointTickets = new PointTicketRepository(context);
             Tickets = new TicketRepository(context);
+            TicketTariff = new TicketTariffRepository(context);
             LiftUsageHistory = new LiftUsageHistoryRepository(context);
         }
         public IUserRepository Users { get; private set; }
@@ -33,6 +34,8 @@ namespace E_SkiLift.Repository
         public ISkiPassRepository SkiPasses { get; private set; }
         public IPointTicketRepository PointTickets { get; private set; }
         public ITicketRepository Tickets { get; private set; }
+
+        public ITicketTariffRepository TicketTariff { get; private set; }
         public ILiftUsageHistoryRepository LiftUsageHistory { get; private set; }
         public int Complete()
         {

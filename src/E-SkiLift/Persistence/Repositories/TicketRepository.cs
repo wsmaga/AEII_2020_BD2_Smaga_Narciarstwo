@@ -14,6 +14,11 @@ namespace E_SkiLift.Persistence.Repositories
             base(dbContext)
         { }
 
+        public int GetAmountOfTicketsSold(DateTime from, DateTime to)
+        {
+            return ERDContainer.Set<Ticket>().Where(ticket => ticket.DateAdded >= from && ticket.DateAdded <= to).Count();
+        }
+
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
     }
 }

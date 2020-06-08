@@ -46,6 +46,8 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IsValid" Type="bit" Nullable="false" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+    <Property Name="PriceSold" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="UserSet">
     <Key>
@@ -238,6 +240,8 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsValid" Type="Boolean" Nullable="false" />
+          <Property Name="DateAdded" Type="DateTime" Nullable="false" />
+          <Property Name="PriceSold" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="User" Abstract="false">
           <Key>
@@ -374,6 +378,8 @@
         <MappingFragment StoreEntitySet="TicketSet">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="PriceSold" ColumnName="PriceSold" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(ERD.SkiPass)">
