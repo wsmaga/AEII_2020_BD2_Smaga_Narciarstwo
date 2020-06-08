@@ -76,5 +76,11 @@ namespace E_SkiLift.Windows
             login.Clear();
             password.Clear();
         }
+
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Resources\\skiLift.chm";
+            System.Windows.Forms.Help.ShowHelp(null, chmFilePath,System.Windows.Forms.HelpNavigator.Topic, "login.html");
+        }
     }
 }
