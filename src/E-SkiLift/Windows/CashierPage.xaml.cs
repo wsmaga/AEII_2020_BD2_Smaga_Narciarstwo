@@ -93,7 +93,14 @@ namespace E_SkiLift.Windows
 
         private void lockButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("NOT YET IMPLEMENTED\nTicket locked.");
+            if (ticketID.Value.HasValue)
+            {
+                if (LoggedCashier.LockTicket(ticketID.Value.Value))
+                    MessageBox.Show("Ticket locked.");
+                else
+                    MessageBox.Show("Could not lock ticket. Ticket doesn't exist or connection to the database has been lost.", "ERROR!",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void refundButton_Click(object sender, RoutedEventArgs e)
@@ -102,8 +109,8 @@ namespace E_SkiLift.Windows
             {
                 if (LoggedCashier.RefundTicket(ticketID.Value.Value))
                     MessageBox.Show("Ticket refunded.");
-                else // TODO: Make something more user-friendly
-                    MessageBox.Show("Database error!", "DATABASE ERROR!",
+                else
+                    MessageBox.Show("Could not refund ticket. Ticket doesn't exist or connection to the database has been lost.", "ERROR!",
                         MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -128,6 +135,18 @@ namespace E_SkiLift.Windows
 
                 default:
                     break;
+            }
+        }
+
+        private void unlockButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ticketID.Value.HasValue)
+            {
+                if (LoggedCashier.UnlockTicket(ticketID.Value.Value))
+                    MessageBox.Show("Ticket unlocked.");
+                else
+                    MessageBox.Show("Could not unlock ticket. Ticket doesn't exist or connection to the database has been lost.", "ERROR!",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

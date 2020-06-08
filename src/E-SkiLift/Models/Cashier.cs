@@ -44,6 +44,39 @@ namespace E_SkiLift.Models
             
         }
 
+        public bool LockTicket(int id)
+        {
+            Ticket temp = uow.Tickets.Get(id);
+            if (temp != null)
+            {
+                if (temp.IsValid == false)
+                    return true;
+                else
+                {
+                    temp.IsValid = false;
+                    return uow.Complete() == 1;
+                }
+            }
+            else
+                return false;
+        }
 
+        public bool UnlockTicket(int id)
+        {
+            Ticket temp = uow.Tickets.Get(id);
+            if (temp != null)
+            {
+                if (temp.IsValid == true)
+                    return true;
+                else
+                {
+                    temp.IsValid = true;
+                    return uow.Complete() == 1;
+                }
+            }
+            else
+                return false;
+        }
     }
+    
 }

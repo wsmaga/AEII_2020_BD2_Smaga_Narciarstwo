@@ -48,6 +48,7 @@
                         </WrapPanel>
                         <Button Content=" DISPLAY TICKET SUMMARY " Name="summaryButton" Click="summaryButton_Click"/>
                         <Button Content=" LOCK TICKET " Name="lockButton" Click="lockButton_Click"/>
+                        <Button Content=" UNLOCK TICKET " Name="unlockButton" Click="unlockButton_Click"/>
                         <Button Content=" REFUND TICKET " Name="refundButton" Click="refundButton_Click"/>
                     </WrapPanel>
                 </WrapPanel>
