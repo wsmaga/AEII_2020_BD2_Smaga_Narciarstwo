@@ -37,7 +37,11 @@ namespace E_SkiLift.Windows.User_Controls
             if (liftId.HasValue)
                 result = LoggedAdmin.RemoveSkiLift(liftId.Value);
             if (result)
+            {
                 MessageBox.Show("Successfuly deleted lift.");
+                DeleteLiftModel dlm = new DeleteLiftModel();
+                DataContext = dlm;
+            }
             else
             {
                 string val = liftId?.ToString() ?? "null";
