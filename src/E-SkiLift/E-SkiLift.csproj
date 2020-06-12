@@ -116,6 +116,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Cashier.cs" />
+    <Compile Include="Models\DeleteUserModel.cs" />
     <Compile Include="Models\Gate.cs" />
     <Compile Include="Models\Interfaces\IModifiesLiftData.cs" />
     <Compile Include="Models\Interfaces\ModifiesLiftData.cs" />

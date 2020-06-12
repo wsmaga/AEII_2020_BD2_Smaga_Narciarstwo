@@ -26,6 +26,8 @@ namespace E_SkiLift.Windows.User_Controls
         {
             InitializeComponent();
             LoggedAdmin = _loggedAdmin;
+            DeleteUserModel dum = new DeleteUserModel();
+            DataContext = dum;
         }
         private void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
