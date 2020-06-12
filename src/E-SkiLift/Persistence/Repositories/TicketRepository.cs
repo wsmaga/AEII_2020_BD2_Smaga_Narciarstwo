@@ -19,6 +19,12 @@ namespace E_SkiLift.Persistence.Repositories
             return ERDContainer.Set<Ticket>().Where(ticket => ticket.DateAdded >= from && ticket.DateAdded <= to).Count();
         }
 
+        public IEnumerable<Ticket> GetTicketByID(int ID)
+        {
+            return ERDContainer.Set<Ticket>()
+                .Where(ticket => ticket.ID == ID);
+        }
+
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
     }
 }

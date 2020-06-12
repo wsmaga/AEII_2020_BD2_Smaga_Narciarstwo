@@ -14,6 +14,19 @@
             <wpfTool:IntegerUpDown Canvas.Top="40" Canvas.Left="100" Width="50" Minimum="1" Name="LiftIdComp"/>
             <Button Content=" DELETE LIFT " Name="deleteLiftButton" Click="deleteLiftButton_Click" Canvas.Top="80" Canvas.Left="10"/>
             <Button Content="Help" Name="helpButton" Click="helpButton_Click" Canvas.Top="380" Canvas.Left="10"/>
+            <Label Content="CURRENT LIFTS LIST" Canvas.Top="40" Canvas.Left="200" FontWeight="Bold"/>
+            <Label Content="ID" Canvas.Top="60" Canvas.Left="200" FontWeight="Bold"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="400" Canvas.Top="80" Canvas.Left="200">
+                <ItemsControl ItemsSource="{Binding LiftsList}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <Label Content="{Binding LiftID}" MinWidth="50"/>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
         </Canvas>
     </StackPanel>
 </UserControl>

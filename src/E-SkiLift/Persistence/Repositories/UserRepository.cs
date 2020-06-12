@@ -22,6 +22,11 @@ namespace E_SkiLift.Persistence
             return ERDContainer.Set<User>().Where(user => user.Login == login).FirstOrDefault();
         }
 
+        public IEnumerable<User> GetAllUsers()
+        {
+            return ERDContainer.Set<User>();
+        }
+
         public ERDContainer ERDContainer { get { return dbContext as ERDContainer; } }
         
     }

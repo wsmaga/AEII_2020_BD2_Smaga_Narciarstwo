@@ -26,6 +26,8 @@ namespace E_SkiLift.Windows.User_Controls
         {
             InitializeComponent();
             LoggedAdmin = _loggedAdmin;
+            DeleteUserModel dum = new DeleteUserModel();
+            DataContext = dum;
         }
         private void deleteUserButton_Click(object sender, RoutedEventArgs e)
         {
@@ -33,8 +35,12 @@ namespace E_SkiLift.Windows.User_Controls
             bool result=false;
             if (userId.HasValue)
                 result = LoggedAdmin.RemoveUser(userId.Value);
-            if(result)
+            if (result)
+            {
                 MessageBox.Show("Successfuly deleted user.");
+                DeleteUserModel dum = new DeleteUserModel();
+                DataContext = dum;
+            }
             else
             {
                 string val = userId?.ToString() ?? "null";

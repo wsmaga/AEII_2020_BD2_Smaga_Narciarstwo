@@ -16,6 +16,9 @@
                     <Label Name="TicketID" Content="{Binding Path=TicketID}" FontWeight="Bold" FontSize="20"/>
                 </WrapPanel>
                 <WrapPanel Orientation="Horizontal">
+                    <Label Name="IsTicketValid" Content="{Binding Path=IsTicketValid}" FontWeight="Bold" FontSize="20" Foreground="Red"/>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
                     <Label Content="Choose Ski Lift " FontWeight="Bold" FontSize="20"/>
                     <ComboBox Name="Lifts" Width="40" Height="20" ItemsSource="{Binding LiftIdList}" SelectionChanged="Lifts_SelectionChanged">
                         <ComboBox.ItemTemplate>
