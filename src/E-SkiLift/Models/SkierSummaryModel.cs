@@ -13,10 +13,24 @@ namespace E_SkiLift.Models
         private int _ticketID;
         private List<SummaryEntry> _summaryEntryList;
         private List<LiftID> _liftIdList = new List<LiftID>();
+        private String _isTicketValid = "";
 
         public SkierSummaryModel(int ticketID)
         {
             LiftUsageHistory[] liftUsageHistory = uow.LiftUsageHistory.GetLiftUsageHistoryByTicketID(ticketID).ToArray();
+
+            int ticketCount = uow.Tickets.GetTicketByID(ticketID).Count<Ticket>();
+
+            if (ticketCount < 1)
+            {
+                IsTicketValid = "Ticket is invalid";
+            }
+            else
+            {
+                bool isLocked = uow.Tickets.GetTicketByID(ticketID).First().IsValid;
+                if (!isLocked)
+                    IsTicketValid = "Ticket is locked";
+            }
 
             TicketID = ticketID;
 
@@ -34,6 +48,19 @@ namespace E_SkiLift.Models
         {
             LiftUsageHistory[] liftUsageHistory = uow.LiftUsageHistory.GetLiftUsageHistoryByLiftIDAndTicketID(liftID, ticketID).ToArray();
             LiftUsageHistory[] liftUsageHistoryLiftIDs = uow.LiftUsageHistory.GetLiftUsageHistoryByTicketID(ticketID).ToArray();
+
+            int ticketCount = uow.Tickets.GetTicketByID(ticketID).Count<Ticket>();
+
+            if (ticketCount < 1)
+            {
+                IsTicketValid = "Ticket is invalid";
+            }
+            else
+            {
+                bool isLocked = uow.Tickets.GetTicketByID(ticketID).First().IsValid;
+                if (!isLocked)
+                    IsTicketValid = "Ticket is locked";
+            }
 
             TicketID = ticketID;
 
@@ -54,6 +81,7 @@ namespace E_SkiLift.Models
         public int TicketID { get => _ticketID; set => _ticketID = value; }
         public List<SummaryEntry> SummaryEntryList { get => _summaryEntryList; set => _summaryEntryList = value; }
         public List<LiftID> LiftIdList { get => _liftIdList; set => _liftIdList = value; }
+        public String IsTicketValid { get => _isTicketValid; set => _isTicketValid = value; }
 
         public struct LiftID
         {
