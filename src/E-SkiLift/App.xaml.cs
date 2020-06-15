@@ -19,6 +19,8 @@ namespace E_SkiLift
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            AppDomain.CurrentDomain.SetData("DataDirectory",
+    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             mainWindow = new MainWindow();
             mainWindow.Show();
         }
