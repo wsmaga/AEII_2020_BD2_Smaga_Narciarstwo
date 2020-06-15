@@ -52,7 +52,7 @@ namespace E_SkiLift.Windows.User_Controls
         }
         private void helpButton_Click(object sender, RoutedEventArgs e)
         {
-            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Resources\\skiLift.chm";
+            String chmFilePath = AppDomain.CurrentDomain.BaseDirectory + "skiLift.chm";
             System.Windows.Forms.Help.ShowHelp(null, chmFilePath, System.Windows.Forms.HelpNavigator.Topic, "companySummary.html");
         }
 
