@@ -35,13 +35,20 @@ namespace E_SkiLift.Windows.User_Controls
 
         private void showSummary_Click(object sender, RoutedEventArgs e)
         {
+            
             DateTime? from = From.SelectedDate;
             DateTime? to = To.SelectedDate;
+            if (from > to)
+            {
+                errorLog.Content = "Date 'from' cannot be highed than date 'to'!";
+                return;
+            }
             LoggedOwner.ShowTotalSales((DateTime)from, (DateTime)to);
             LoggedOwner.ShowTotalTicketsSold((DateTime)from, (DateTime)to);
             LoggedOwner.ShowLiftUsage((DateTime)from, (DateTime)to);
             DataContext = null;
             DataContext = LoggedOwner;
+            errorLog.Content = "";
         }
         private void helpButton_Click(object sender, RoutedEventArgs e)
         {
