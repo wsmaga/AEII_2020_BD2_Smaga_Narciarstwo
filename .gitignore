@@ -265,6 +265,9 @@ ServiceFabricBackup/
 *.ldf
 *.ndf
 
+!Skilift.mdf
+!Skilift_log.ldf
+
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout

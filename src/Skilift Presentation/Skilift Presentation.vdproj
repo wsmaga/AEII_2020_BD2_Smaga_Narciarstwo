@@ -15,24 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_053B1BF144C787ED15A35323D7E045A0"
-        "OwnerKey" = "8:_0A2965204A0B459F99F5AA672968F183"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_053B1BF144C787ED15A35323D7E045A0"
-        "OwnerKey" = "8:_40B284913C6F4C42987BA4CC048F4E8A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_053B1BF144C787ED15A35323D7E045A0"
-        "OwnerKey" = "8:_3B33A203217F4A829E9204BC5FF6234B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0A2965204A0B459F99F5AA672968F183"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -93,24 +75,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_49E6606A6EDA30EDEC6BC1B597D92AD3"
-        "OwnerKey" = "8:_1B9244CF70C74057B6B844DE46F5D8FC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_49E6606A6EDA30EDEC6BC1B597D92AD3"
-        "OwnerKey" = "8:_392F3D004B4545C4A1A26879D3CACF06"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6006828476DC9448ED6D656B807A0F12"
-        "OwnerKey" = "8:_392F3D004B4545C4A1A26879D3CACF06"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7B04E1B287504ACEA37065CC3116D2BC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -123,14 +87,50 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8069D0282D9DC1F703983BF8CCB95AFD"
+        "OwnerKey" = "8:_392F3D004B4545C4A1A26879D3CACF06"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_85E705E6A64446ABBF33AC7B660CA965"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_9213BF51E99BFBFDEB429E73870C5A94"
+        "OwnerKey" = "8:_0A2965204A0B459F99F5AA672968F183"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9213BF51E99BFBFDEB429E73870C5A94"
+        "OwnerKey" = "8:_40B284913C6F4C42987BA4CC048F4E8A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9213BF51E99BFBFDEB429E73870C5A94"
+        "OwnerKey" = "8:_3B33A203217F4A829E9204BC5FF6234B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9F5B2253960F4FF296358C700061562A"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A6BB20335500F66CCC16FAF7AD3290ED"
+        "OwnerKey" = "8:_1B9244CF70C74057B6B844DE46F5D8FC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A6BB20335500F66CCC16FAF7AD3290ED"
+        "OwnerKey" = "8:_392F3D004B4545C4A1A26879D3CACF06"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -143,6 +143,12 @@
         {
         "MsmKey" = "8:_B700471F370145B18FBED3EFB7766C34"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BFAFE259FFDC12F37C37FE33452C1643"
+        "OwnerKey" = "8:_EE8B8B42A67942C38DFDFB7BA243C046"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -177,12 +183,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F729B3A9FB88A5DD353CFE2006DD09AF"
-        "OwnerKey" = "8:_EE8B8B42A67942C38DFDFB7BA243C046"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F9F41E98576145DF833D0525E41CE353"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -202,7 +202,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F729B3A9FB88A5DD353CFE2006DD09AF"
+        "OwnerKey" = "8:_BFAFE259FFDC12F37C37FE33452C1643"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -244,7 +244,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6006828476DC9448ED6D656B807A0F12"
+        "OwnerKey" = "8:_8069D0282D9DC1F703983BF8CCB95AFD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -256,7 +256,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_49E6606A6EDA30EDEC6BC1B597D92AD3"
+        "OwnerKey" = "8:_A6BB20335500F66CCC16FAF7AD3290ED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -268,7 +268,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_053B1BF144C787ED15A35323D7E045A0"
+        "OwnerKey" = "8:_9213BF51E99BFBFDEB429E73870C5A94"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -296,6 +296,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -320,6 +328,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -350,37 +366,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_053B1BF144C787ED15A35323D7E045A0"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Xceed.Wpf.AvalonDock, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_053B1BF144C787ED15A35323D7E045A0"
-                    {
-                    "Name" = "8:Xceed.Wpf.AvalonDock.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Xceed.Wpf.AvalonDock.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0A2965204A0B459F99F5AA672968F183"
             {
             "AssemblyRegister" = "3:1"
@@ -397,7 +382,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\Xceed.Wpf.AvalonDock.Themes.Aero.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -417,7 +402,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\E-SkiLift.pdb"
             "TargetName" = "8:E-SkiLift.pdb"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -448,7 +433,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\EntityFramework.SqlServer.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -468,7 +453,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\OxyPlot.xml"
             "TargetName" = "8:OxyPlot.xml"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -488,7 +473,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\EntityFramework.xml"
             "TargetName" = "8:EntityFramework.xml"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -519,7 +504,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\E-SkiLift.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -539,7 +524,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\OxyPlot.Wpf.xml"
             "TargetName" = "8:OxyPlot.Wpf.xml"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -570,7 +555,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\Xceed.Wpf.AvalonDock.Themes.VS2010.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -601,7 +586,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\Xceed.Wpf.AvalonDock.Themes.Metro.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -632,7 +617,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\Xceed.Wpf.AvalonDock.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -647,74 +632,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_49E6606A6EDA30EDEC6BC1B597D92AD3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_49E6606A6EDA30EDEC6BC1B597D92AD3"
-                    {
-                    "Name" = "8:EntityFramework.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:EntityFramework.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6006828476DC9448ED6D656B807A0F12"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Xceed.Wpf.Toolkit, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_6006828476DC9448ED6D656B807A0F12"
-                    {
-                    "Name" = "8:Xceed.Wpf.Toolkit.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Xceed.Wpf.Toolkit.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7B04E1B287504ACEA37065CC3116D2BC"
             {
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\EntityFramework.SqlServer.xml"
             "TargetName" = "8:EntityFramework.SqlServer.xml"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -734,7 +657,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\E-SkiLift.exe.config"
             "TargetName" = "8:E-SkiLift.exe.config"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -747,6 +670,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8069D0282D9DC1F703983BF8CCB95AFD"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Xceed.Wpf.Toolkit, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_8069D0282D9DC1F703983BF8CCB95AFD"
+                    {
+                    "Name" = "8:Xceed.Wpf.Toolkit.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Xceed.Wpf.Toolkit.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_85E705E6A64446ABBF33AC7B660CA965"
@@ -765,7 +719,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\Xceed.Wpf.Toolkit.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -778,6 +732,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9213BF51E99BFBFDEB429E73870C5A94"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Xceed.Wpf.AvalonDock, Version=3.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9213BF51E99BFBFDEB429E73870C5A94"
+                    {
+                    "Name" = "8:Xceed.Wpf.AvalonDock.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Xceed.Wpf.AvalonDock.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F5B2253960F4FF296358C700061562A"
@@ -785,7 +770,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\Resources\\background.bmp"
             "TargetName" = "8:background.bmp"
             "Tag" = "8:"
-            "Folder" = "8:_9B3871047DD94D038CC947B66879B62E"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -800,12 +785,43 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A6BB20335500F66CCC16FAF7AD3290ED"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_A6BB20335500F66CCC16FAF7AD3290ED"
+                    {
+                    "Name" = "8:EntityFramework.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:EntityFramework.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A9D538FC11584752842F227BBE4AE5E5"
             {
             "SourcePath" = "8:..\\E-SkiLift\\Resources\\skiLift.chw"
             "TargetName" = "8:skiLift.chw"
             "Tag" = "8:"
-            "Folder" = "8:_9B3871047DD94D038CC947B66879B62E"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -825,7 +841,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\Resources\\background.xcf"
             "TargetName" = "8:background.xcf"
             "Tag" = "8:"
-            "Folder" = "8:_9B3871047DD94D038CC947B66879B62E"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -838,6 +854,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BFAFE259FFDC12F37C37FE33452C1643"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_BFAFE259FFDC12F37C37FE33452C1643"
+                    {
+                    "Name" = "8:OxyPlot.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:OxyPlot.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CBAEC3F968D94B07826B75E96FBF4188"
@@ -856,7 +903,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\OxyPlot.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -927,7 +974,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\OxyPlot.Wpf.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -958,7 +1005,7 @@
             "SourcePath" = "8:..\\E-SkiLift\\bin\\Release\\EntityFramework.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -973,43 +1020,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F729B3A9FB88A5DD353CFE2006DD09AF"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F729B3A9FB88A5DD353CFE2006DD09AF"
-                    {
-                    "Name" = "8:OxyPlot.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:OxyPlot.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_14D1D386A12943619E88F0CEED0C729C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F9F41E98576145DF833D0525E41CE353"
             {
             "SourcePath" = "8:..\\E-SkiLift\\Resources\\skiLift.chm"
             "TargetName" = "8:skiLift.chm"
             "Tag" = "8:"
-            "Folder" = "8:_9B3871047DD94D038CC947B66879B62E"
+            "Folder" = "8:_5132E80C0AE546BB9C78C2EA26D89EC9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1073,39 +1089,6 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_9B3871047DD94D038CC947B66879B62E"
-                    {
-                    "Name" = "8:Resources"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_EC88BCE800A5409A975BDB7FF1CF4B8F"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_EB2E7975982E415380A9A674B32148E8"
-                    {
-                    "Name" = "8:bin"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_D33CB3B4946B4BC189ABD3036EC9A380"
-                        "Folders"
-                        {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_14D1D386A12943619E88F0CEED0C729C"
-                            {
-                            "Name" = "8:bin"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_15188C5A9425428B82062E489B1A7BE6"
-                                "Folders"
-                                {
-                                }
-                            }
-                        }
-                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_E564410913834FE7AFDCF92990C91F38"
@@ -1136,7 +1119,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Skilift Presentation"
         "ProductCode" = "8:{B95999ED-0DEB-4B2E-A4D1-0C7DB091554D}"
-        "PackageCode" = "8:{F8B5F235-827F-4169-8BC0-7F6730DC1DB9}"
+        "PackageCode" = "8:{DC205191-532A-42F7-AD90-5D74BB215322}"
         "UpgradeCode" = "8:{6BFD24B2-B1D7-4FF8-8CE1-E3FDB7A3AA2D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
