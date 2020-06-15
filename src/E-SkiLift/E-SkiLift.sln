@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-SkiLift", "E-SkiLift.csproj", "{50B09580-66D2-46AA-AC2C-BF0CB8822B37}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "E-SkiLift Presentation", "..\testtt\testtt.vdproj", "{9FA67035-B49E-4225-8B78-B4C80D2673AD}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Skilift Presentation", "..\Skilift Presentation\Skilift Presentation.vdproj", "{FE596EB3-8542-47A0-BB29-A40D73F06EB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,10 @@ Global
 		{50B09580-66D2-46AA-AC2C-BF0CB8822B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50B09580-66D2-46AA-AC2C-BF0CB8822B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50B09580-66D2-46AA-AC2C-BF0CB8822B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA67035-B49E-4225-8B78-B4C80D2673AD}.Debug|Any CPU.ActiveCfg = Debug
+		{9FA67035-B49E-4225-8B78-B4C80D2673AD}.Release|Any CPU.ActiveCfg = Release
+		{FE596EB3-8542-47A0-BB29-A40D73F06EB2}.Debug|Any CPU.ActiveCfg = Debug
+		{FE596EB3-8542-47A0-BB29-A40D73F06EB2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
