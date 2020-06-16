@@ -32,6 +32,7 @@ namespace E_SkiLift.Windows
             InitializeComponent();
             this.parentWindow = parentWindow;
             LoggedCashier = null;
+            TimePicker.Value = DateTime.Now.AddHours(1);
         }
 
         public void SetUser(User loggedUser)

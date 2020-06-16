@@ -31,7 +31,7 @@
                         </WrapPanel>
                         <WrapPanel>
                             <Label Name="TimeLabel" Content="Expiration time: " IsEnabled="False"/>
-                            <wpfTool:DateTimePicker Name="TimePicker" Value="{x:Static sys:DateTime.Now}" ShowButtonSpinner="False" IsEnabled="False"/>
+                            <wpfTool:DateTimePicker Name="TimePicker" ShowButtonSpinner="False" IsEnabled="False" Minimum="{x:Static sys:DateTime.Today}" Format="Custom" FormatString="dd MMMM yyyy HH:mm" Width="170"/>
                         </WrapPanel>
                         <Button Content=" SELL NEW TICKET " Name="sellButton" Click="sellButton_Click" MaxWidth="100" HorizontalAlignment="Left"/>
                     </WrapPanel>
