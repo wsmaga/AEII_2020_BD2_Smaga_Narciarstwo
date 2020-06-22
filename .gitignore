@@ -19,9 +19,11 @@
 mono_crash.*
 
 # Build results
-[Dd]ebug/
+!src\E-SkiLift Production\Release/*
+!src\E-SkiLift Production\Debug/*
+!src\Skilift Presentation\Debug/*
+!src\Skilift Presentation\Release/*
 [Dd]ebugPublic/
-[Rr]elease/
 [Rr]eleases/
 x64/
 x86/
